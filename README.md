@@ -81,11 +81,16 @@ name-of-your-computer
 ```
 
 #### Set up internet access
->Question: How to do this?
+- Run `pacman -S iw wpa_supplicant dialog wpa_actiond` to install the required packages.
+- Run `wifi-menu` to create a profile.
+- Run `systemctl enable netctl-auto@interface_name.service` to automatically connect on start.
+- Run `ip link` to find the interface name, it will be something like  “wlo1” for wifi.
 
 #### Set up GRUB
 - Run `pacman -S grub efibootmgr os-prober` to install the required packages.
-- Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub in the partition.
+- Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub.
+- Make sure the windows partition is mounted
+- Run `grub-mkconfig -o /boot/grub/grub.cfg` to generate grub configuration file.
 
 #### Reboot
 - Run `exit` to go back to the usb drive.

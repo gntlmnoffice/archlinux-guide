@@ -74,17 +74,18 @@ LANG=en_US.UTF-8
 #### Set up root password
 - Run `passwd` to set up the password
 
-#### Set host name
+#### Set up Network configuration (wireless)
 - Create the file `/etc/hostname`, and add the line:
 ```
 name-of-your-computer
 ```
-
-#### Set up internet access
-- Run `pacman -S iw wpa_supplicant dialog wpa_actiond` to install the required packages.
-- Run `wifi-menu` to create a profile.
-- Run `systemctl enable netctl-auto@interface_name.service` to automatically connect on start.
-- Run `ip link` to find the interface name, it will be something like  “wlo1” for wifi.
+- Create the file `/etc/hosts`, and add the lines:
+```
+127.0.0.1	localhost
+::1		localhost
+127.0.1.1	myhostname.localdomain	myhostname
+```
+- Run `pacman -S dialog` to install the required packages to set up the wifi.
 
 #### Set up GRUB
 - Run `pacman -S grub efibootmgr os-prober` to install the required packages.

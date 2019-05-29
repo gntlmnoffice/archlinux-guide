@@ -35,13 +35,20 @@ Steps to install arch in my pc. This document shows how to install arch using a 
 - Run `mkswap /dev/sdX2` and then `swapon /dev/sdX2` to initialize the *Swap* partition.
 
 #### Mount the file systems
-- Run `mkdir /mnt/home` to create the directory to mount the *Home* partition.
+- Run `mkdir /mnt/{home,boot,mnt/{windows,main,software}}` to create the directories to mount the partitions.
 - Using the `mount` command, mount: 
   - The *Root* partition to `/mnt`.
   - The *Home* partition to `/mnt/home`.
-  - The *EFI* partition to `/?????`.
+  - The *EFI* partition to `/mnt/boot`.
+  - The *Windows* partition to `/mnt/mnt/windows`.
+  - The *Emtpy* partition to `/mnt/mnt/empty`.
+  - The *Main* partition to `/mnt/mnt/main`.
+  - The *Software* partition to `/mnt/mnt/software`. 
   
->Question: Where to mount the EFI partition?
+  Example: 
+  ```
+  mount /dev/sdX1 /mnt
+  ```
 
 #### Install Arch Linux
 - Run `pacstrap /mnt base base-devel`
@@ -77,7 +84,8 @@ name-of-your-computer
 >Question: How to do this?
 
 #### Set up GRUB
->Question: How to do this?
+- Run `pacman -S grub efibootmgr os-prober` to install the required packages.
+- Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub in the partition.
 
 #### Reboot
 - Run `exit` to go back to the usb drive.

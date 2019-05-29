@@ -1,6 +1,9 @@
 # Arch installation
 Steps to install arch in my pc. This document shows how to install arch using a wifi usb stick and how to set up dual boot with windows.
 
+#### Verify the boot mode
+- Run `ls /sys/firmware/efi/efivars`. If the directory does not exist, the system may be booted in *BIOS* or *CSM* mode.
+
 #### Connect to the internet
 - Run `wifi-menu` to set up the wifi. 
 - Run `ping google.com` to test the conection.

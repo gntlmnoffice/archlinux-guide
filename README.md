@@ -1,5 +1,5 @@
 # Arch installation
-Steps to install arch in my pc.
+Steps to install arch in my pc. This document shows how to install arch using a wifi usb stick and how to set up dual boot with windows.
 
 #### Connect to the internet
 - Run `wifi-menu` to set up the wifi. 

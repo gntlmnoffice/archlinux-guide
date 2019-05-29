@@ -32,10 +32,14 @@ Steps to install arch in my pc. This document shows how to install arch using a 
 
 #### Format partitions
 - Run `mkfs.ext4` to format the *Home* and *Swap* partitions.
+  Example:
+  ```
+  mkfs.ext4 /dev/sdX1
+  ```
 - Run `mkswap /dev/sdX2` and then `swapon /dev/sdX2` to initialize the *Swap* partition.
 
 #### Mount the file systems
-- Run `mkdir /mnt/{home,boot,mnt/{windows,main,software}}` to create the directories to mount the partitions.
+- Run `mkdir /mnt/{home,boot,mnt/{windows,main,software,empty}}` to create the directories to mount the partitions.
 - Using the `mount` command, mount: 
   - The *Root* partition to `/mnt`.
   - The *Home* partition to `/mnt/home`.

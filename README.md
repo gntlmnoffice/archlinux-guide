@@ -32,6 +32,7 @@ Steps to install arch in my pc. This document shows how to install arch using a 
 
 #### Format partitions
 - Run `mkfs.ext4` to format the *Home* and *Swap* partitions.
+
   Example:
   ```
   mkfs.ext4 /dev/sdX1

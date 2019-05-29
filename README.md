@@ -31,8 +31,6 @@ Steps to install arch in my pc.
 - Run `mkfs.ext4` to format the *Home* and *Swap* partitions.
 - Run `mkswap /dev/sdX2` and then `swapon /dev/sdX2` to initialize the *Swap* partition.
 
->Question: How does arch knows how to use the swap partition?
-
 #### Mount the file systems
 - Run `mkdir /mnt/home` to create the directory to mount the *Home* partition.
 - Using the `mount` command, mount: 

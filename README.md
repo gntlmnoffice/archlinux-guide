@@ -92,8 +92,6 @@ name-of-your-computer
 - Create the file `/etc/hosts`, and add the lines:
 ```
 127.0.0.1	localhost
-::1		localhost
-127.0.1.1	myhostname.localdomain	myhostname
 ```
 - Run `pacman -S dialog` to install the required packages to set up the wifi.
 

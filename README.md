@@ -35,30 +35,31 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
   - *Home* (I am using the rest of the SSD disk).
 
 #### Format partitions
-- Run `mkfs.ext4` to format the *Home* and *Swap* partitions.
+- Run `mkfs.ext4` to format the *Home* and *Root* partitions.
 
   Example:
   ```
   mkfs.ext4 /dev/sdX1
   ```
+  
+#### Initialize swap partition
 - Run `mkswap /dev/sdX2` and then `swapon /dev/sdX2` to initialize the *Swap* partition.
 
 #### Mount the file systems
-- Run `mkdir /mnt/{home,boot,mnt/{windows,main,software,empty}}` to create the directories to mount the partitions.
-- Using the `mount` command, mount: 
-  - The *Root* partition to `/mnt`.
-  - The *Home* partition to `/mnt/home`.
-  - The *EFI* partition to `/mnt/boot`.
-  - The *Windows* partition to `/mnt/mnt/windows`.
-  - The *Emtpy* partition to `/mnt/mnt/empty`.
-  - The *Main* partition to `/mnt/mnt/main`.
-  - The *Software* partition to `/mnt/mnt/software`. 
-  
+- Using the `mount` command, mount the *Root* partition to `/mnt`.`
   Example: 
   ```
   mount /dev/sdX1 /mnt
   ```
-
+- Run `mkdir -p /mnt/{home,boot,mnt/windows,main,software,empty}}` to create the directories to mount the partitions.
+- Using the `mount` command, mount:
+  - The *Home* partition to `/mnt/home`.
+  - The *EFI* partition to `/mnt/boot`.
+  - The *Windows* partition to `/mnt/mnt/windows`.
+  - The *Emtpy* partition to `/mnt/mnt/empty`.
+  - The *Software* partition to `/mnt/mnt/software`. 
+  - The *Main* partition to `/mnt/mnt/main`.
+  
 #### Install Arch Linux
 - Run `pacstrap /mnt base base-devel`
 

@@ -106,6 +106,15 @@ name-of-your-computer
 - Run `umount -R /mnt` to unmount all the drive.
 - Run `reboot` to restart the computer. Remember to remove the installation drive
 
+#### Add user
+- Run `useradd -m -g group_name user_name` to add a user.
+  Example:
+  ```
+  useradd -m -g wheel sandy
+  ```
+- Run `passwd user_name` to set the password for a user.
+- Edit `/etc/sudoers` to give users sudo access
+
 #### Install common programs
 - Run:
 ```

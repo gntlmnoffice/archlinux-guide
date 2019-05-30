@@ -84,7 +84,7 @@ LANG=en_US.UTF-8
 #### Set up root password
 - Run `passwd` to set up the password
 
-#### Set up Network configuration (wireless)
+#### Set up network (wireless)
 - Create the file `/etc/hostname`, and add the line:
 ```
 name-of-your-computer
@@ -93,7 +93,7 @@ name-of-your-computer
 ```
 127.0.0.1	localhost
 ```
-- Run `pacman -S dialog` to install the required packages to set up the wifi.
+- Run `pacman -S dialog wpa_supplicant` to install the required packages to set up the wifi.
 
 #### Set up GRUB
 - Run `pacman -S grub efibootmgr os-prober` to install the required packages.

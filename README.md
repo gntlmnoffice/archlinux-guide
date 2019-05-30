@@ -1,6 +1,10 @@
 # Arch installation
 Steps to install arch in my pc. This document shows how to install arch using a wifi usb stick and how to set up dual boot with windows.
 
+#### Make shure Windows is not hibernating
+
+Run `powercfg -h off` to disable hibernation in Windows in the cmd as administrator.
+
 #### Verify the boot mode
 - Run `ls /sys/firmware/efi/efivars`. If the directory does not exist, the system may be booted in *BIOS* or *CSM* mode.
 

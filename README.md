@@ -105,3 +105,22 @@ name-of-your-computer
 - Run `exit` to go back to the usb drive.
 - Run `umount -R /mnt` to unmount all the drive.
 - Run `reboot` to restart the computer. Remember to remove the installation drive
+
+#### Install common programs
+- Run:
+```
+pacman -S mlocate noto-fonts firefox google-chrome code atom
+```
+
+#### Set up dwm, st and dmenu
+- Run `pacman -S libxinerama fontconfig libxft` to install the required dependencies.
+- Go to the directories containing your source for dwm, st and dmenu and run `make install` on each.
+- Create the file `~/.xinitrc` and add the following line:
+  ```
+    exec dwm
+  ```
+  This will automatically start dwm when xorg starts
+
+#### Set up xorg
+- Run `pacman -S xorg-server xorg-xinit` to install xorg
+- Run `xinit` to start the server

@@ -56,7 +56,7 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
   - The *Home* partition to `/mnt/home`.
   - The *EFI* partition to `/mnt/boot`.
   - The *Windows* partition to `/mnt/mnt/windows`.
-  - The *Emtpy* partition to `/mnt/mnt/empty`.
+  - The *Empty* partition to `/mnt/mnt/empty`.
   - The *Software* partition to `/mnt/mnt/software`. 
   - The *Main* partition to `/mnt/mnt/main`.
   
@@ -65,6 +65,7 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
+- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults` for the *Windows*, *Empty*, *Software* and *Main* entries.
 
 #### Change root into the new system
 - Run `arch-chroot /mnt`
@@ -113,17 +114,23 @@ name-of-your-computer
   useradd -m -g wheel sandy
   ```
 - Run `passwd user_name` to set the password for a user.
-- Edit `/etc/sudoers` to give users sudo access
+- Edit `/etc/sudoers` and uncomment the line:
+ ```
+ %wheel ALL=(ALL) NOPASSWD: ALL
+ ```
+ This gives users of the *wheel* group sudo access without password.
+- Run `logout` to log out from root.
+- Enter your credentials to log as the newly created user
 
-#### Install common programs
+#### Install packages I use
 - Run:
 ```
-pacman -S mlocate noto-fonts firefox google-chrome code atom
+pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git
 ```
 
 #### Set up dwm, st and dmenu
 - Run `pacman -S libxinerama fontconfig libxft` to install the required dependencies.
-- Go to the directories containing your source for dwm, st and dmenu and run `make install` on each.
+- Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
 - Create the file `~/.xinitrc` and add the following line:
   ```
     exec dwm

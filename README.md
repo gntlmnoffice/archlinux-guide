@@ -127,7 +127,7 @@ name-of-your-computer
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
 
-#### Install packages I use
+#### Install common packages
 - Run:
 ```
 pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish feh xorg-xrandr ntfs-3g
@@ -145,3 +145,8 @@ pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish 
 #### Set up xorg
 - Run `pacman -S xorg-server xorg-xinit` to install xorg
 - Run `xinit` to start the server
+- Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
+  ```
+  allowed_users=anybody
+  needs_root_rights=yes
+  ```

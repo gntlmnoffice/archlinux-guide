@@ -130,7 +130,7 @@ name-of-your-computer
 #### Install packages I use
 - Run:
 ```
-pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish
+pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish feh xorg-xrandr
 ```
 
 #### Set up dwm, st and dmenu

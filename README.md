@@ -96,6 +96,7 @@ name-of-your-computer
 ```
 - Run `pacman -S dialog wpa_supplicant` to install the required packages to set up the wifi.
 
+
 #### Set up GRUB
 - Run `pacman -S grub efibootmgr os-prober` to install the required packages.
 - Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub.
@@ -106,6 +107,10 @@ name-of-your-computer
 - Run `exit` to go back to the usb drive.
 - Run `umount -R /mnt` to unmount all the drive.
 - Run `reboot` to restart the computer. Remember to remove the installation drive
+
+#### Connect to wifi by default
+- Run `wifi-menu` and create a profile. Name it something memorable like **default**
+- Run `netctl enable profile_name` and next time you boot it should connect to the wifi automatically.
 
 #### Add user
 - Run `useradd -m -g group_name user_name` to add a user.
@@ -125,7 +130,7 @@ name-of-your-computer
 #### Install packages I use
 - Run:
 ```
-pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git
+pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish
 ```
 
 #### Set up dwm, st and dmenu

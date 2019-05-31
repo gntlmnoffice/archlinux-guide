@@ -130,7 +130,7 @@ name-of-your-computer
 #### Install common packages
 - Run:
 ```
-pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish feh xorg-xrandr ntfs-3g
+pacman -S ntfs-3g feh mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish
 ```
 
 #### Set up dwm, st and dmenu
@@ -143,7 +143,7 @@ pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish 
   This will automatically start dwm when xorg starts
 
 #### Set up xorg
-- Run `pacman -S xorg-server xorg-xinit` to install xorg
+- Run `pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Run `xinit` to start the server
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```

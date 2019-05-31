@@ -60,7 +60,7 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
   - The *Software* partition to `/mnt/mnt/software`. 
   - The *Main* partition to `/mnt/mnt/main`.
   
-#### Install Arch Linux
+#### Install Arch Linux and all the main packages I use
 - Run `pacstrap /mnt base base-devel`
 
 #### Set up fstab
@@ -130,7 +130,7 @@ name-of-your-computer
 #### Install packages I use
 - Run:
 ```
-pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish feh xorg-xrandr
+pacman -S mlocate noto-fonts firefox code atom vim neovim ranger sxhkd git fish feh xorg-xrandr ntfs-3g
 ```
 
 #### Set up dwm, st and dmenu

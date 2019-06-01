@@ -130,7 +130,7 @@ name-of-your-computer
 #### Install common packages
 - Run:
 ```
-pacman -S ntfs-3g feh mlocate noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family firefox code atom vim neovim ranger sxhkd git fish
+pacman -S ntfs-3g feh mlocate noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family firefox code atom vim neovim ranger sxhkd git fish zip unzip
 ```
 
 #### Set up dwm, st and dmenu

@@ -139,7 +139,7 @@ name-of-your-computer
   ```
 - Install **codecs**:
   ```
-  pacman -S mplayer
+  pacman -S mpv
   ```
 -Install **applications**:
   ```

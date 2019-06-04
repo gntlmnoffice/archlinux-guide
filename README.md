@@ -94,11 +94,11 @@ name-of-your-computer
 ```
 127.0.0.1	localhost
 ```
-- Run `pacman -S dialog wpa_supplicant` to install the required packages to set up the wifi.
+- Run `pacman -Syu dialog wpa_supplicant` to install the required packages to set up the wifi.
 
 
 #### Set up GRUB
-- Run `pacman -S grub efibootmgr os-prober` to install the required packages.
+- Run `pacman -Syu grub efibootmgr os-prober` to install the required packages.
 - Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub.
 - Make sure the windows partition is mounted
 - Run `grub-mkconfig -o /boot/grub/grub.cfg` to generate grub configuration file.
@@ -130,20 +130,20 @@ name-of-your-computer
 #### Install packages
 - Install **drivers** and configure nvidia:
   ```
-  pacman -S ntfs-3g nvidia
+  pacman -Syu ntfs-3g nvidia
   nvidia-xconfig
   ```
 - Install **fonts**:
   ```
-  pacman -S noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family
+  pacman -Syu noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family
   ```
 - Install **codecs**:
   ```
-  pacman -S mpv
+  pacman -Syu mpv
   ```
 -Install **applications**:
   ```
-  pacman -S feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
+  pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   ```
 -Install **yay**
   ```
@@ -152,7 +152,7 @@ name-of-your-computer
   makepkg -si
   ```
 #### Set up dwm, st and dmenu
-- Run `pacman -S libxinerama fontconfig libxft` to install the required dependencies.
+- Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
 - Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
 - Create the file `~/.xinitrc` and add the following line:
   ```
@@ -161,7 +161,7 @@ name-of-your-computer
   This will automatically start dwm when xorg starts
 
 #### Set up X
-- Run `pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
+- Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Run `xinit` to start the server
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```

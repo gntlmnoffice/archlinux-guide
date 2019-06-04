@@ -141,7 +141,12 @@ name-of-your-computer
   ```
   pacman -S feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   ```
-
+-Install **yay**
+  ```
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  ```
 #### Set up dwm, st and dmenu
 - Run `pacman -S libxinerama fontconfig libxft` to install the required dependencies.
 - Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
@@ -151,7 +156,7 @@ name-of-your-computer
   ```
   This will automatically start dwm when xorg starts
 
-#### Set up xorg
+#### Set up X
 - Run `pacman -S xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Run `xinit` to start the server
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:

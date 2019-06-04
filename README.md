@@ -127,11 +127,19 @@ name-of-your-computer
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
 
-#### Install common packages
-- Run:
-```
-pacman -S ntfs-3g feh mlocate noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family firefox code atom vim neovim ranger sxhkd git fish zip unzip
-```
+#### Install packages
+- Install **drivers**:
+  ```
+  pacman -S ntfs-3g nvidia
+  ```
+- Install **fonts**:
+  ```
+  pacman -S noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family
+  ```
+-Install **applications**:
+  ```
+  pacman -S feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
+  ```
 
 #### Set up dwm, st and dmenu
 - Run `pacman -S libxinerama fontconfig libxft` to install the required dependencies.

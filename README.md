@@ -128,9 +128,10 @@ name-of-your-computer
 - Enter your credentials to log as the newly created user
 
 #### Install packages
-- Install **drivers**:
+- Install **drivers** and configure nvidia:
   ```
   pacman -S ntfs-3g nvidia
+  nvidia-xconfig
   ```
 - Install **fonts**:
   ```

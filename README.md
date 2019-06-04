@@ -137,6 +137,10 @@ name-of-your-computer
   ```
   pacman -S noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family
   ```
+- Install **codecs**:
+  ```
+  pacman -S mplayer
+  ```
 -Install **applications**:
   ```
   pacman -S feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip

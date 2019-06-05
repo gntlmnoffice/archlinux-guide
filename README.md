@@ -141,11 +141,11 @@ name-of-your-computer
   ```
   pacman -Syu mpv
   ```
--Install **applications**:
+- Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   ```
--Install **yay**
+- Install **yay**
   ```
   git clone https://aur.archlinux.org/yay.git
   cd yay

@@ -128,6 +128,12 @@ name-of-your-computer
 - Enter your credentials to log as the newly created user
 
 #### Install packages
+- Install **yay**:
+  ```
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  ```
 - Install **drivers** and configure nvidia:
   ```
   pacman -Syu ntfs-3g nvidia
@@ -144,13 +150,9 @@ name-of-your-computer
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
+  yay -S google-chrome
   ```
-- Install **yay**:
-  ```
-  git clone https://aur.archlinux.org/yay.git
-  cd yay
-  makepkg -si
-  ```
+  
 #### Set up dwm, st and dmenu
 - Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
 - Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.

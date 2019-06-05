@@ -65,7 +65,7 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
-- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0000` for the *Windows*, *Empty*, *Software* and *Main* entries.
+- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0000,gid=sandy` for the *Windows*, *Empty*, *Software* and *Main* entries.
 
 #### Change root into the new system
 - Run `arch-chroot /mnt`

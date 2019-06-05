@@ -147,6 +147,10 @@ name-of-your-computer
   ```
   pacman -Syu mpv
   ```
+- Install **audio** utilities:
+  ```
+  pacman -Syu pulseaudio pavucontrol
+  ```
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip

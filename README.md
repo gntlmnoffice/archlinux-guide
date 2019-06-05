@@ -145,7 +145,7 @@ name-of-your-computer
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   ```
-- Install **yay**
+- Install **yay**:
   ```
   git clone https://aur.archlinux.org/yay.git
   cd yay

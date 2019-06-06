@@ -141,7 +141,7 @@ name-of-your-computer
   ```
 - Install **fonts**:
   ```
-  yay -S all-repository-fonts ttf-google-fonts-git
+  yay -S all-repository-fonts
   ```
 - Install **codecs**:
   ```

@@ -141,7 +141,7 @@ name-of-your-computer
   ```
 - Install **fonts**:
   ```
-  pacman -Syu noto-fonts ttf-liberation ttf-dejavu ttf-roboto ttf-ubuntu-font-family
+  yay -S all-repository-fonts ttf-google-fonts-git
   ```
 - Install **codecs**:
   ```

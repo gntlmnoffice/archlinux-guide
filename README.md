@@ -151,6 +151,12 @@ name-of-your-computer
   ```
   pacman -Syu pulseaudio pavucontrol
   ```
+- Install **cursor**:
+  ```
+  yay -S breeze-snow-cursor-theme
+  ```
+  **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
+  
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip

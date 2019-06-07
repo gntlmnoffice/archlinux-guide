@@ -168,7 +168,7 @@ name-of-your-computer
 - Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
 - Create the file `~/.xinitrc` and add the following line:
   ```
-    exec dwm
+  exec dwm
   ```
   This will automatically start dwm when xorg starts
 

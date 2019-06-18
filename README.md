@@ -160,7 +160,7 @@ name-of-your-computer
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
-  yay -S google-chrome
+  yay -S google-chrome numlockx
   ```
   
 #### Set up dwm, st and dmenu

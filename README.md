@@ -162,7 +162,8 @@ name-of-your-computer
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   yay -S google-chrome numlockx
   ```
-  
+- Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation):
+
 #### Set up dwm, st and dmenu
 - Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
 - Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.

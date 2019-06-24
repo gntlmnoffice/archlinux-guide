@@ -96,7 +96,6 @@ name-of-your-computer
 ```
 - Run `pacman -Syu dialog wpa_supplicant` to install the required packages to set up the wifi.
 
-
 #### Set up GRUB
 - Run `pacman -Syu grub efibootmgr os-prober` to install the required packages.
 - Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub.
@@ -162,7 +161,7 @@ name-of-your-computer
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
   yay -S google-chrome numlockx
   ```
-- Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation):
+  - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
 
 #### Set up dwm, st and dmenu
 - Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.

@@ -148,7 +148,7 @@ name-of-your-computer
   ```
 - Install **audio** utilities:
   ```
-  pacman -Syu pulseaudio pavucontrol
+  pacman -Syu pulseaudio pavucontrol pamixer
   ```
 - Install **cursor**:
   ```

@@ -159,7 +159,7 @@ name-of-your-computer
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom vim neovim ranger sxhkd git fish zip unzip
-  yay -S google-chrome numlockx
+  yay -S google-chrome numlockx unclutter
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
 

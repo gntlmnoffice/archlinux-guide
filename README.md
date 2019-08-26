@@ -98,7 +98,7 @@ name-of-your-computer
 
 #### Set up GRUB
 - Run `pacman -Syu grub efibootmgr os-prober` to install the required packages.
-- Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=GRUB` to install grub.
+- Run `grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch` to install grub.
 - Make sure the windows partition is mounted
 - Run `grub-mkconfig -o /boot/grub/grub.cfg` to generate grub configuration file.
 

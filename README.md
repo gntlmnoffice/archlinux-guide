@@ -125,7 +125,52 @@ name-of-your-computer
  This gives users of the *wheel* group sudo access without password.
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
+#### Install packages
+- Install **yay**:
+  ```
+  git clone https://aur.archlinux.org/yay.git
+  cd yay
+  makepkg -si
+  ```
+- Install **drivers** and configure nvidia:
+  ```
+  pacman -Syu ntfs-3g nvidia
+  nvidia-xconfig
+  ```
+- Install **fonts**:
+  ```
+  yay -S all-repository-fonts
+  ```
+- Install **codecs**:
+  ```
+  pacman -Syu mpv
+  ```
+- Install **audio** utilities:
+  ```
+  pacman -Syu pulseaudio pavucontrol pamixer
+  ```
+- Install **cursor**:
+  ```
+  yay -S breeze-snow-cursor-theme
+  ```
+  **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
 
+- Install **applications**:
+  ```
+  pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
+  yay -S google-chrome numlockx unclutter
+  ```
+  - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
+
+#### Set up dwm, st and dmenu
+- Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
+- Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
+- Create the file `~/.xinitrc` and add the following line:
+  ```
+  exec dwm
+  ```
+  This will automatically start dwm when xorg starts
+  
 #### Set up X
 - Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Run `xinit` to start the server

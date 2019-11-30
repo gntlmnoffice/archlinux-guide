@@ -9,13 +9,11 @@ Download the arch linux iso image [here](https://www.archlinux.org/download/). Y
 
 >Note: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media).
 
-- Find out the name of your USB drive with `lsblk -a`. Make sure that it is **not** mounted.
+- Find out the name of your USB drive with `lsblk`.
 - Run the following command, replacing `/dev/sdx` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)
 ```
 sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 ```
-
-# dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 #### Make shure Windows is not hibernating
 

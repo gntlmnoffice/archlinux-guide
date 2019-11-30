@@ -1,9 +1,21 @@
 # Arch installation
 Steps to install arch in my pc. This document shows how to install arch using a wifi usb stick and how to set up dual boot with windows.
 
-#### Prepare iso
+#### Download the iso
 
 Download the arch linux iso image [here](https://www.archlinux.org/download/). I use transmission to download the torrent but there are also direct downloads. The iso size is 635.0 MB.
+
+#### Prepare flash installation media
+
+Note: There are different methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media). I use dd in this guide.
+
+- Find out the name of your USB drive with `lsblk -a`. Make sure that it is **not** mounted.
+- Run the following command, replacing `/dev/sdx` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)
+```
+sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+```
+
+# dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 
 #### Make shure Windows is not hibernating
 

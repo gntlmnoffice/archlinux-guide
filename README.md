@@ -10,9 +10,9 @@ Download the arch linux iso image [here](https://www.archlinux.org/download/). Y
 >Note: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media).
 
 - Find out the name of your USB drive with `lsblk`.
-- Run the following command, replacing `/dev/sdx` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)
+- Run the following command, replacing `/dev/sdX` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)
 ```
-sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
+sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress oflag=sync
 ```
 
 #### Disable fast start-up on Windows
@@ -56,17 +56,17 @@ Plug the flash installation media and boot the computer from it.
 
   Example:
   ```
-  mkfs.ext4 /dev/sdX1
+  mkfs.ext4 /dev/sdX#
   ```
   
 #### Initialize swap partition
-- Run `mkswap /dev/sdX2` and then `swapon /dev/sdX2` to initialize the *Swap* partition.
+- Run `mkswap /dev/sdX#` and then `swapon /dev/sdX#` to initialize the *Swap* partition.
 
 #### Mount the file systems
 - Using the `mount` command, mount the *Root* partition to `/mnt`.`
   Example: 
   ```
-  mount /dev/sdX1 /mnt
+  mount /dev/sdX# /mnt
   ```
 - Run `mkdir -p /mnt/{home,boot,mnt/windows,main,software,empty}}` to create the directories to mount the partitions.
 - Using the `mount` command, mount:
@@ -196,3 +196,22 @@ name-of-your-computer
   allowed_users=anybody
   needs_root_rights=yes
   ```
+  
+#### Enable hibernation
+>Note: For more information see [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
+
+- Run `lsblk` to find out the name of the SWAP partition.
+- Open the file `/etc/default/grub`, find the line that starts with `GRUB_CMDLINE_LINUX_DEFAULT="` and add `resume=/dev/sdX#"`to the sequence of space separated paramenter within the quotation marks.
+- Run the following command to generate the `grub.cfg` configuration file:  
+  ```
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
+  ```
+- Open `/etc/mkinitcpio.conf`, find the list of HOOKS and add `resume`, it should appear after udev. For xample:
+```
+HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+```
+- Run the following command to regenerate the initramfs for these changes to take effect.
+```
+sudo mkinitcpio -p linux
+```
+

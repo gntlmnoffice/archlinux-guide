@@ -16,6 +16,9 @@ sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress oflag=sync
 ```
 >Tip: If the USB's Arch ISO hangs or is unable to load, try repeating the dd media creation process on the same USB drive one or more times.
 
+#### Partition Windows drive if needed
+Follow the instructions described [here](https://www.howtogeek.com/101862/how-to-manage-partitions-on-windows-without-downloading-any-other-software/)
+
 #### Disable fast start-up on Windows
 Follow the steps described [here](https://www.tenforums.com/tutorials/4189-turn-off-fast-startup-windows-10-a.html).
 

@@ -15,9 +15,14 @@ Download the arch linux iso image [here](https://www.archlinux.org/download/). Y
 sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdx status=progress oflag=sync
 ```
 
-#### Make shure Windows is not hibernating
+#### Disable fast start-up on Windows
+Follow the steps described [here](https://www.tenforums.com/tutorials/4189-turn-off-fast-startup-windows-10-a.html).
 
+#### Disable hibernation in Windows
 Run `powercfg -h off` to disable hibernation in Windows in the cmd as administrator.
+
+#### Boot from the flash installation media
+Plug the flash installation media and boot the computer from it.
 
 #### Verify the boot mode
 - Run `ls /sys/firmware/efi/efivars`. If the directory does not exist, the system may be booted in *BIOS* or *CSM* mode.
@@ -30,8 +35,6 @@ Run `powercfg -h off` to disable hibernation in Windows in the cmd as administra
 
 - Run `timedatectl set-ntp true` to ensure the system clock is accurate.
 - Run `timedatectl status` to check the service status.
-
->Question: Why is this step is required?
 
 #### Partition the disks
 - Run `lsblk` to list the devices.

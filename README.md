@@ -21,6 +21,9 @@ Follow the steps described [here](https://www.tenforums.com/tutorials/4189-turn-
 #### Disable hibernation in Windows
 Run `powercfg -h off` to disable hibernation in Windows in the cmd as administrator.
 
+#### Disable secure boot
+In the boot menu disable secure boot.
+
 #### Boot from the flash installation media
 Plug the flash installation media and boot the computer from it.
 

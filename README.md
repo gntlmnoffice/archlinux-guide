@@ -7,7 +7,7 @@ Download the arch linux iso image [here](https://www.archlinux.org/download/). Y
 
 #### Prepare flash installation media
 
->Note: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media).
+>Note: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_automatic_tools).
 
 - Find out the name of your USB drive with `lsblk`.
 - Run the following command, replacing `/dev/sdX` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)

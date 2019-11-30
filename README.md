@@ -14,6 +14,7 @@ Download the arch linux iso image [here](https://www.archlinux.org/download/). Y
 ```
 sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress oflag=sync
 ```
+>Tip: If the USB's Arch ISO hangs or is unable to load, try repeating the dd media creation process on the same USB drive one or more times.
 
 #### Disable fast start-up on Windows
 Follow the steps described [here](https://www.tenforums.com/tutorials/4189-turn-off-fast-startup-windows-10-a.html).

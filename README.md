@@ -74,12 +74,13 @@ Plug the flash installation media and boot the computer from it.
   ```
   mkfs.ext4 /dev/sdX#
   ```
+- Run `mkfs.fat -F32 /dev/sdX#` to format the *EFI* partition
   
 #### Initialize swap partition
-- Run `mkswap /dev/sdX#` and then `swapon /dev/sdX#` to initialize the *Swap* partition.
+- Run `mkswap /dev/sdX#` and then `swapon /dev/sdX#` to initialize the *swap* partition.
 
 #### Mount the file systems
-- Using the `mount` command, mount the *Root* partition to `/mnt`.`
+- Using the `mount` command, mount the *root* partition to `/mnt`.`
   Example: 
   ```
   mount /dev/sdX# /mnt

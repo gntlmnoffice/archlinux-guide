@@ -63,12 +63,11 @@ Plug the flash installation media and boot the computer from it.
     - `w` to write the changes.
 - You need the following partitions:
   - *EFI* (this one is shared with Windows).
-  - *Swap* (I am using 20 GB).
-  - *Root* (I am using 30 GB).
-  - *Home* (I am using the rest of the SSD disk).
+  - *swap* (I use `R + sqrt(R)` where `R` is the size of the RAM).
+  - *root* (use the remaining space).
 
 #### Format partitions
-- Run `mkfs.ext4` to format the *Home* and *Root* partitions.
+- Run `mkfs.ext4` to format the *root* partitions.
 
   Example:
   ```

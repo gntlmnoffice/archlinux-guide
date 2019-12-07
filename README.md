@@ -48,7 +48,6 @@ Plug the flash installation media and boot the computer from it.
 - Run `ping google.com` to test the conection.
 
 #### Update the system clock
-
 - Run `timedatectl set-ntp true` to ensure the system clock is accurate.
 - Run `timedatectl status` to check the service status.
 
@@ -61,10 +60,12 @@ Plug the flash installation media and boot the computer from it.
     - `d` to **delete** partition.
     - `n` to create a **new** partition.
     - `w` to write the changes.
+    - `t` change partition type.
 - You need the following partitions:
-  - *EFI* (this one is shared with Windows).
-  - *swap* (I use `R + sqrt(R)` where `R` is the size of the RAM). Run the command `free` to get the size of the RAM
+  - *EFI* (use (260–512 MB) it may be shared with Windows).
+  - *swap* (size should be `R + sqrt(R)`, where `R` is the size of the RAM). Run the command `free` to get the size of the RAM
   - *root* (use the remaining space).
+-After the *EFI* partition is created, run the command `t` to change the partition type to `EFI System` (`1`)
 
 #### Format partitions
 - Run `mkfs.ext4` to format the *root* partitions.
@@ -85,12 +86,7 @@ Plug the flash installation media and boot the computer from it.
   ```
 - Run `mkdir -p /mnt/{home,boot,mnt/windows,main,software,empty}}` to create the directories to mount the partitions.
 - Using the `mount` command, mount:
-  - The *Home* partition to `/mnt/home`.
   - The *EFI* partition to `/mnt/boot`.
-  - The *Windows* partition to `/mnt/mnt/windows`.
-  - The *Empty* partition to `/mnt/mnt/empty`.
-  - The *Software* partition to `/mnt/mnt/software`. 
-  - The *Main* partition to `/mnt/mnt/main`.
   
 #### Install Arch Linux and all the main packages I use
 - Run `pacstrap /mnt base base-devel`

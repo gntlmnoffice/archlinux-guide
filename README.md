@@ -63,7 +63,7 @@ Plug the flash installation media and boot the computer from it.
     - `w` to write the changes.
 - You need the following partitions:
   - *EFI* (this one is shared with Windows).
-  - *swap* (I use `R + sqrt(R)` where `R` is the size of the RAM).
+  - *swap* (I use `R + sqrt(R)` where `R` is the size of the RAM). Run the command `free` to get the size of the RAM
   - *root* (use the remaining space).
 
 #### Format partitions

@@ -84,9 +84,8 @@ Plug the flash installation media and boot the computer from it.
   ```
   mount /dev/sdX# /mnt
   ```
-- Run `mkdir -p /mnt/{home,boot,mnt/windows,main,software,empty}}` to create the directories to mount the partitions.
-- Using the `mount` command, mount:
-  - The *EFI* partition to `/mnt/boot`.
+- Run: `mkdir /mnt/boot` to create the mounting point for the *EFI* partition
+- Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
   
 #### Install Arch Linux and all the main packages I use
 - Run `pacstrap /mnt base base-devel`

@@ -116,11 +116,13 @@ LANG=en_US.UTF-8
 #### Set up network (wireless)
 - Create the file `/etc/hostname`, and add the line:
 ```
-name-of-your-computer
+your-computer-name
 ```
 - Create the file `/etc/hosts`, and add the lines:
 ```
 127.0.0.1	localhost
+::1		localhost
+127.0.1.1	your-computer-name.localdomain	your-computer-name
 ```
 - Run `pacman -Syu dialog wpa_supplicant` to install the required packages to set up the wifi.
 

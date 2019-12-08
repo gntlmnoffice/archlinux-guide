@@ -158,8 +158,29 @@ your-computer-name
  This gives users of the *wheel* group sudo access without password.
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
-#### Install packages
-- Install **yay**:
+
+#### Set up graphical environment
+
+#### Install X
+- Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
+- Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
+  ```
+  allowed_users=anybody
+  needs_root_rights=yes
+  ```
+- Run `xinit` to start the server
+
+#### Set up dwm, st and dmenu
+- Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
+- Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
+- Create the file `~/.xinitrc` and add the following line:
+  ```
+  exec dwm
+  ```
+  This will automatically start dwm when xorg starts
+
+#### Install yay
+- To install *yay*, run:
   ```
   sudo pacman -Syu git
   git clone https://aur.archlinux.org/yay.git
@@ -168,6 +189,9 @@ your-computer-name
   cd ..
   rm -r yay
   ```
+
+#### Install main packages
+
 - Install **drivers** and configure nvidia:
   ```
   pacman -Syu ntfs-3g nvidia
@@ -185,12 +209,6 @@ your-computer-name
   ```
   pacman -Syu pulseaudio pavucontrol pamixer
   ```
-- Install **cursor**:
-  ```
-  yay -S breeze-snow-cursor-theme
-  ```
-  **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
-
 - Install **applications**:
   ```
   pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
@@ -198,24 +216,19 @@ your-computer-name
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
 
-#### Set up dwm, st and dmenu
-- Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
-- Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
-- Create the file `~/.xinitrc` and add the following line:
+### Settings
+
+#### Install cursor theme
+To install my cursor theme run:
   ```
-  exec dwm
+  yay -S breeze-snow-cursor-theme
   ```
-  This will automatically start dwm when xorg starts
-  
-#### Set up X
-- Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
-- Run `xinit` to start the server
-- Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
-  ```
-  allowed_users=anybody
-  needs_root_rights=yes
-  ```
-  
+  **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
+
+#### Enable numpack by default
+
+#### Auto hide cursor
+
 #### Enable hibernation
 >Note: For more information see [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
 

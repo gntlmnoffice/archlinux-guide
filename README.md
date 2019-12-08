@@ -89,11 +89,11 @@ Plug the flash installation media and boot the computer from it.
 - Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
   
 #### Install Arch Linux and all the main packages
-- Run `pacstrap /mnt base linux linux-firmware base-devel neovim`
+- Run `pacstrap /mnt base base-devel linux linux-firmware dialog wpa_supplicant neovim`
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
-- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy` for the *Windows*, *Empty*, *Software* and *Main* entries.
+- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy` for the *NTFS* partitions.
 
 #### Change root into the new system
 - Run `arch-chroot /mnt`
@@ -124,7 +124,6 @@ your-computer-name
 ::1		localhost
 127.0.1.1	your-computer-name.localdomain	your-computer-name
 ```
-- Run `pacman -Syu dialog wpa_supplicant` to install the required packages to set up the wifi.
 
 #### Set up GRUB
 - Run `pacman -Syu grub efibootmgr os-prober` to install the required packages.

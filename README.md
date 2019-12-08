@@ -161,7 +161,7 @@ your-computer-name
 
 #### Set up graphical environment
 
-#### Install gnome
+##### Install gnome
 - Run `pacman -Syu gnome`
 - Create the file `~/.xinitrc` and add the following line:
   ```
@@ -171,7 +171,7 @@ your-computer-name
   ```
   This will automatically start dwm when xorg starts
 
-#### Install X
+##### Install X
 - Run `sudo pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```

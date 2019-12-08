@@ -172,7 +172,7 @@ your-computer-name
   This will automatically start dwm when xorg starts
 
 #### Install X
-- Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
+- Run `sudo pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```
   allowed_users=anybody
@@ -195,11 +195,11 @@ your-computer-name
     ```
     sudo usermod -a -G audio <user-name>
     ```
-  - Restart the computer, audio should be available
   - Install audio utilities:
     ```
     sudo pacman -Syu pulseaudio pavucontrol
     ```
+  - Restart the computer, audio should be working.
 
 - Install **drivers** and configure nvidia:
   ```

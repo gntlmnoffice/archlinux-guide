@@ -88,8 +88,8 @@ Plug the flash installation media and boot the computer from it.
 - Run: `mkdir /mnt/boot` to create the mounting point for the *EFI* partition
 - Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
   
-#### Install Arch Linux and all the main packages I use
-- Run `pacstrap /mnt base base-devel neovim`
+#### Install Arch Linux and all the main packages
+- Run `pacstrap /mnt base linux linux-firmware base-devel neovim`
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file

@@ -141,8 +141,8 @@ your-computer-name
 ### Post installation
 
 #### Connect to wifi by default
-- Run `wifi-menu` and create a profile. Name it something memorable like **default**
-- Run `netctl enable profile_name` and next time you boot it should connect to the wifi automatically.
+- Run `wifi-menu` and create a profile. Name it something memorable like **home**
+- Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
 #### Add user
 - Run `useradd -m -g group_name user_name` to add a user.
@@ -161,6 +161,7 @@ your-computer-name
 #### Install packages
 - Install **yay**:
   ```
+  sudo pacman -Syu git
   git clone https://aur.archlinux.org/yay.git
   cd yay
   makepkg -si

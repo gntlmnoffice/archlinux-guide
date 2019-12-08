@@ -159,7 +159,7 @@ your-computer-name
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
 
-#### Set up graphical environment
+#### Set up desktop environment
 
 ##### Install gnome
 - Run `pacman -Syu gnome`

@@ -162,7 +162,7 @@ your-computer-name
 #### Set up desktop environment
 
 ##### Install gnome
-- Run `pacman -Syu gnome`
+- Run `sudo pacman -Syu gnome`
 - Create the file `~/.xinitrc` and add the following line:
   ```
   export XDG_SESSION_TYPE=x11
@@ -218,7 +218,7 @@ your-computer-name
 #### Install applications
 
   ```
-  pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
+  sudo pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
   yay -S google-chrome numlockx unclutter
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).

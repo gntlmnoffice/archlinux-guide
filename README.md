@@ -232,8 +232,18 @@ To install my cursor theme run:
   ```
   **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
 
-#### Enable numpack by default
+#### Enable numlock on start
+- Run:
+```
+ sudo pacman -Syu numlockx
+```
+- Add it to the `~/.xinitrc` file before exec:
+```
+numlockx &
 
+exec window_manager
+```
+>Note: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
 #### Auto hide cursor
 
 #### Enable hibernation

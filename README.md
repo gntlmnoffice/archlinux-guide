@@ -190,9 +190,20 @@ your-computer-name
   cd ..
   rm -r yay
   ```
+- Install **audio**:
+  - Add user to the audio group:
+    ```
+    sudo usermod -a -G audio <user-name>
+    ```
+  - Restart the computer, audio should be available
+  - Install audio utilities:
+    ```
+    sudo pacman -Syu pulseaudio pavucontrol
+    ```
+
 - Install **drivers** and configure nvidia:
   ```
-  pacman -Syu ntfs-3g nvidia
+  sudo pacman -Syu ntfs-3g nvidia
   nvidia-xconfig
   ```
 - Install **fonts**:
@@ -201,12 +212,9 @@ your-computer-name
   ```
 - Install **codecs**:
   ```
-  pacman -Syu mpv
+  sudo pacman -Syu mpv
   ```
-- Install **audio** utilities:
-  ```
-  pacman -Syu pulseaudio pavucontrol pamixer
-  ```
+
 #### Install applications
 
   ```

@@ -227,6 +227,12 @@ your-computer-name
 
 ### Settings
 
+#### Gnome utilities
+- Install gnome tweaks:
+```
+sudo pacman -Syu gnome-tweaks
+```
+
 #### Install cursor theme
 - Run:
   ```

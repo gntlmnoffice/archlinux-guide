@@ -93,7 +93,7 @@ swapon /dev/sdX#
 - Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
   
 #### Install Arch Linux and all the main packages
-- Run `pacstrap /mnt base base-devel linux linux-firmware dialog wpa_supplicant neovim`
+- Run `pacstrap /mnt base base-devel linux linux-firmware dialog wpa_supplicant wifi-menu neovim`
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
@@ -107,7 +107,7 @@ swapon /dev/sdX#
 - Run `hwclock --systohc` to generate `/etc/adjtime`
 
 #### Set up localization
-- Uncomment `en_US.UTF-8 UTF-8`, `en_US ISO-8859-1` in `/etc/locale.gen`.
+- Using `nvimn` uncomment `en_US.UTF-8 UTF-8`, `en_US ISO-8859-1` in `/etc/locale.gen`.
 - Run `locale-gen` to generate them.
 - Create the file `/etc/locale.conf`, and add the line:
 ```
@@ -122,7 +122,7 @@ LANG=en_US.UTF-8
 ```
 your-computer-name
 ```
-- Create the file `/etc/hosts`, and add the lines:
+- Edit the file `/etc/hosts`, and add the lines:
 ```
 127.0.0.1	localhost
 ::1		localhost

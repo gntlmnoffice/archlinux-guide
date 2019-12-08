@@ -115,7 +115,7 @@ LANG=en_US.UTF-8
 - Run `passwd` to set up the password
 
 #### Set up network (wireless)
-- Run `pacman -Syu dialog wpa_supplicant netctl` to install the required packages.
+- Run `pacman -Syu dialog wpa_supplicant dhcpcd netctl` to install the required packages.
 - Create the file `/etc/hostname`, and add the line:
 ```
 your-computer-name

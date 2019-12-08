@@ -77,7 +77,11 @@ Plug the flash installation media and boot the computer from it.
 - Run `mkfs.fat -F32 /dev/sdX#` to format the *EFI* partition
   
 #### Initialize swap partition
-- Run `mkswap /dev/sdX#` and then `swapon /dev/sdX#` to initialize the *swap* partition.
+- To initialize the *swap* partition, run:
+```
+mkswap /dev/sdX#
+swapon /dev/sdX#
+```
 
 #### Mount the file systems
 - Using the `mount` command, mount the *root* partition to `/mnt`.`
@@ -93,7 +97,7 @@ Plug the flash installation media and boot the computer from it.
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
-- Go to the generated file `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy` for the *NTFS* partitions.
+- For the *NTFS* partitions, edit `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy`.
 
 #### Change root into the new system
 - Run `arch-chroot /mnt`

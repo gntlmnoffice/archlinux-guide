@@ -218,37 +218,44 @@ your-computer-name
 #### Install applications
 
   ```
-  sudo pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
-  yay -S google-chrome numlockx unclutter
+  yay -S google-chrome
+  sudo pacman -Syu firefox code ranger sxhkd git zip unzip vlc openssh blender krita cura 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
+  
+>Note: see the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the wiki for more.
 
 ### Settings
 
 #### Install cursor theme
-To install my cursor theme run:
+- Run:
   ```
   yay -S breeze-snow-cursor-theme
   ```
-  **Note**: The packages install the cursor in `/usr/share/icons/Breeze_Snow`, I copied the folder and followed the instructions from [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
+- The packages install the cursor in `/usr/share/icons/Breeze_Snow`, copy the folder and follow the instructions listed [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
 
 #### Enable numlock on start
 - Run:
 ```
  sudo pacman -Syu numlockx
 ```
-- Add it to the `~/.xinitrc` file before exec:
+- Add it to the `~/.xinitrc` file before `exec`:
 ```
 numlockx &
-
-exec window_manager
 ```
 >Note: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
+
 #### Auto hide cursor
+```
+ sudo pacman -Syu unclutter
+```
+- Add it to the `~/.xinitrc` file before `exec`:
+```
+unclutter &
+```
+>Note: More [here](https://wiki.archlinux.org/index.php/Unclutter)
 
 #### Enable hibernation
->Note: For more information see [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
-
 - Run `lsblk` to find out the name of the SWAP partition.
 - Open the file `/etc/default/grub`, find the line that starts with `GRUB_CMDLINE_LINUX_DEFAULT="` and add `resume=/dev/sdX#"`to the sequence of space separated paramenter within the quotation marks.
 - Run the following command to generate the `grub.cfg` configuration file:  
@@ -263,4 +270,4 @@ HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
 ```
 sudo mkinitcpio -p linux
 ```
-
+>Note: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).

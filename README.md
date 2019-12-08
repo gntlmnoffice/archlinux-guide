@@ -219,7 +219,7 @@ your-computer-name
 
   ```
   yay -S google-chrome
-  sudo pacman -Syu firefox code ranger sxhkd git zip unzip vlc openssh blender krita cura 
+  sudo pacman -Syu firefox code ranger sxhkd git zip unzip vlc blender krita cura 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
   

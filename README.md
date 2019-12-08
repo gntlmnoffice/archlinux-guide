@@ -93,7 +93,7 @@ swapon /dev/sdX#
 - Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
   
 #### Install Arch Linux and all the main packages
-- Run `pacstrap /mnt base base-devel linux linux-firmware dialog wpa_supplicant wifi-menu neovim`
+- Run `pacstrap /mnt base base-devel linux linux-firmware dialog wpa_supplicant neovim`
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file

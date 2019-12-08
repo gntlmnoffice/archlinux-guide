@@ -49,22 +49,15 @@ Plug the flash installation media and boot the computer from it.
 
 #### Update the system clock
 - Run `timedatectl set-ntp true` to ensure the system clock is accurate.
-- Run `timedatectl status` to check the service status.
+- Run `timedatectl` to check the service status.
 
 #### Partition the disks
 - Run `lsblk` to list the devices.
-- Run `fdisk /dev/sdX` to partition a disk.
-  This will take you to a new command prompt:
-    - `m` for **help**.
-    - `p` to **print** the state of the drive.
-    - `d` to **delete** partition.
-    - `n` to create a **new** partition.
-    - `w` to write the changes.
-    - `t` change partition type.
+- Run `gdisk /dev/sdX` to partition the disk.
 - You need the following partitions:
-  - *EFI* (use (260–512 MB) it may be shared with Windows).
-  - *swap* (size should be `R + sqrt(R)`, where `R` is the size of the RAM). Run the command `free` to get the size of the RAM
-  - *root* (use the remaining space).
+  - *EFI*: **size:** `260–512 MB`, **type:** `EFI System`, it may be shared with Windows.
+  - *swap* **size:** `R + sqrt(R)`, where `R` is the size of the RAM, **type:** `Linux swap`. Run the command `free` to get the size of the RAM
+  - *root* **size:** use the remaining space **type:** `Linux`.
 -After the *EFI* partition is created, run the command `t` to change the partition type to `EFI System` (`1`)
 
 #### Format partitions

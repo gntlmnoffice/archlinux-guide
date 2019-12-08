@@ -161,6 +161,16 @@ your-computer-name
 
 #### Set up graphical environment
 
+#### Install gnome
+- Run `pacman -Syu gnome`
+- Create the file `~/.xinitrc` and add the following line:
+  ```
+  export XDG_SESSION_TYPE=x11
+  export GDK_BACKEND=x11
+  exec gnome-session
+  ```
+  This will automatically start dwm when xorg starts
+
 #### Install X
 - Run `pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
@@ -170,17 +180,8 @@ your-computer-name
   ```
 - Run `xinit` to start the server
 
-#### Set up dwm, st and dmenu
-- Run `pacman -Syu libxinerama fontconfig libxft` to install the required dependencies.
-- Go to the directories containing your version of the source for dwm, st and dmenu and run `make install` on each.
-- Create the file `~/.xinitrc` and add the following line:
-  ```
-  exec dwm
-  ```
-  This will automatically start dwm when xorg starts
-
-#### Install yay
-- To install *yay*, run:
+#### Install main packages
+- Install **yay**:
   ```
   sudo pacman -Syu git
   git clone https://aur.archlinux.org/yay.git
@@ -189,9 +190,6 @@ your-computer-name
   cd ..
   rm -r yay
   ```
-
-#### Install main packages
-
 - Install **drivers** and configure nvidia:
   ```
   pacman -Syu ntfs-3g nvidia
@@ -209,7 +207,8 @@ your-computer-name
   ```
   pacman -Syu pulseaudio pavucontrol pamixer
   ```
-- Install **applications**:
+#### Install applications
+
   ```
   pacman -Syu feh mlocate firefox code atom neovim xsel ranger w3m xterm sxhkd git openssh fish zip unzip
   yay -S google-chrome numlockx unclutter

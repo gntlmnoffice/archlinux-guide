@@ -54,11 +54,15 @@ Plug the flash installation media and boot the computer from it.
 #### Partition the disks
 - Run `lsblk` to list the devices.
 - Run `gdisk /dev/sdX` to partition the disk.
-- You need the following partitions:
-  - *EFI*: **size:** `260–512 MB`, **type:** `EFI System`, it may be shared with Windows.
-  - *swap* **size:** `R + sqrt(R)`, where `R` is the size of the RAM, **type:** `Linux swap`. Run the command `free` to get the size of the RAM
-  - *root* **size:** use the remaining space **type:** `Linux`.
--After the *EFI* partition is created, run the command `t` to change the partition type to `EFI System` (`1`)
+- *EFI*: 
+  - *size*: `260–512 MB` (example: `+260m`)
+  - *type:* `EFI System`, it may be shared with Windows.
+- *swap*: 
+  - *size*: `R + sqrt(R)`, where `R` is the size of the RAM 
+  - *type:* `Linux swap`. Run the command `free` to get the size of the RAM
+- *root*: 
+  - *size*: use the remaining space 
+  - *type:* `Linux x86-64 root (/)`.
 
 #### Format partitions
 - Run `mkfs.ext4` to format the *root* partitions.

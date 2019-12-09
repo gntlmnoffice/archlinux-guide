@@ -257,7 +257,8 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   sudo systemctl enable gdm.service
   ```
-- Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and *source* `~/.xprofile` from `~/.xinitrc`.
+- Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and remove`~/.xprofile`, also remove the logit to start `x` from `~/bash_profile`.
+
 - Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
 
 >Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.

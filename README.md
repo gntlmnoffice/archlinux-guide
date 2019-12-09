@@ -75,10 +75,10 @@ Plug the flash installation media and boot the computer from it.
   
 #### Initialize swap partition
 - To initialize the *swap* partition, run:
-```
-mkswap /dev/sdX#
-swapon /dev/sdX#
-```
+  ```
+  mkswap /dev/sdX#
+  swapon /dev/sdX#
+  ```
 
 #### Mount the file systems
 - Using the `mount` command, mount the *root* partition to `/mnt`.`
@@ -107,9 +107,9 @@ swapon /dev/sdX#
 - Uncomment `en_US.UTF-8 UTF-8`, `en_US ISO-8859-1` in `/etc/locale.gen`, to install neovim run`pacman -Syu neovim`.
 - Run `locale-gen` to generate them.
 - Create the file `/etc/locale.conf`, and add the line:
-```
-LANG=en_US.UTF-8
-```
+  ```
+  LANG=en_US.UTF-8
+  ```
 
 #### Set up root password
 - Run `passwd` to set up the password
@@ -117,15 +117,15 @@ LANG=en_US.UTF-8
 #### Set up network (wireless)
 - Run `pacman -Syu dialog wpa_supplicant dhcpcd netctl` to install the required packages.
 - Create the file `/etc/hostname`, and add the line:
-```
-your-computer-name
-```
+  ```
+  your-computer-name
+  ```
 - Edit the file `/etc/hosts`, and add the lines:
-```
-127.0.0.1	localhost
-::1		localhost
-127.0.1.1	your-computer-name.localdomain	your-computer-name
-```
+  ```
+  127.0.0.1	localhost
+  ::1		localhost
+  127.0.1.1	your-computer-name.localdomain	your-computer-name
+  ```
 
 #### Set up GRUB
 - Run `pacman -Syu grub efibootmgr os-prober` to install the required packages.
@@ -152,9 +152,9 @@ your-computer-name
   ```
 - Run `passwd user_name` to set the password for a user.
 - Edit `/etc/sudoers` and uncomment the line:
- ```
- %wheel ALL=(ALL) NOPASSWD: ALL
- ```
+  ```
+  %wheel ALL=(ALL) NOPASSWD: ALL
+  ```
  This gives users of the *wheel* group sudo access without password.
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
@@ -235,9 +235,9 @@ your-computer-name
 ##### Install gnome tweaks
 
 - Run:
-```
-sudo pacman -Syu gnome-tweaks
-```
+  ```
+  sudo pacman -Syu gnome-tweaks
+  ```
 
 ##### Set 12 hours time format
 - Go to *System Settings* and select *Date & Time*. Use the drop down menu on *Time Format* to select *AM/PM*:
@@ -250,13 +250,13 @@ sudo pacman -Syu gnome-tweaks
 GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
 
 - Install `gdm3setup`, an interface to configure GDM3, autologin options and change Shell theme:
-```
-yay -S gdm3setup
-```
+  ```
+  yay -S gdm3setup
+  ```
 - Enable the gdm service so it starts automatically:
-```
-sudo systemctl enable gdm.service
-```
+  ```
+  sudo systemctl enable gdm.service
+  ```
 - Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and *source* `~/.xprofile` from `~/.xinitrc`.
 - Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
 
@@ -266,15 +266,15 @@ sudo systemctl enable gdm.service
 >Note: This is only needed if a tiled window manager is not used.
 
 - Run:
-```
-yay -S devilspie
-```
+  ```
+  yay -S devilspie
+  ```
 - Create the file `~/.devilspie/maximize.ds` and add the following content:
-```
-(begin
-    (maximize)(focus)
-) 
-```
+  ```
+  (begin
+      (maximize)(focus)
+  ) 
+  ```
 - Add `devilspie &` to `~/.xinitrc` file before `exec`.
 
 #### Install cursor theme
@@ -290,19 +290,20 @@ yay -S devilspie
  sudo pacman -Syu numlockx
 ```
 - Add it to `~/.xinitrc` file before `exec`:
-```
-numlockx &
-```
+  ```
+  numlockx &
+  ```
 >Note: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
 
 #### Auto hide cursor
-```
- sudo pacman -Syu unclutter
-```
+- Run:
+  ```
+   sudo pacman -Syu unclutter
+  ```
 - Add it to `~/.xinitrc` file before `exec`:
-```
-unclutter &
-```
+  ```
+  unclutter &
+  ```
 >Note: More [here](https://wiki.archlinux.org/index.php/Unclutter)
 
 #### Enable hibernation
@@ -313,11 +314,11 @@ unclutter &
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
 - Open `/etc/mkinitcpio.conf`, find the list of HOOKS and add `resume`, it should appear after udev. For xample:
-```
-HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
-```
+  ```
+  HOOKS=(base udev autodetect modconf block filesystems keyboard resume fsck)
+  ```
 - Run the following command to regenerate the initramfs for these changes to take effect.
-```
-sudo mkinitcpio -p linux
-```
+  ```
+  sudo mkinitcpio -p linux
+  ```
 >Note: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).

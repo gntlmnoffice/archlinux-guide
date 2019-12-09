@@ -255,10 +255,13 @@ systemctl enable gdm.service
 
 #### Set up display manager GDM
 GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
+
 - Run:
 ```
 sudo systemctl enable gdm.service
 ```
+- Add all the initialization code in `~/.xprofile`
+
 >More [here](https://wiki.archlinux.org/index.php/GDM)
 
 #### Start windows maximized

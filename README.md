@@ -202,7 +202,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
 
 - Move your `~/.bash_profile` to `~/.profile`
 
->Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.
+>Note: With this setup for some reason I can't use `$TERMINAL` in `sxhkdrc`.
 
 >Note: More [here](https://wiki.archlinux.org/index.php/GDM)
 

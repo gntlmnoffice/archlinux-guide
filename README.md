@@ -178,7 +178,33 @@ Plug the flash installation media and boot the computer from it.
   allowed_users=anybody
   needs_root_rights=yes
   ```
-- Run `xinit` to start the server
+- Run `xinit` to start the server, or add the following lines to `~/.bash_profile`:
+  ```
+  # Start X automatically
+  if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
+    startx
+  fi
+  ```
+>Note: The last step is not needed if we use *GDM* and start it with ` sudo systemctl enable gdm.service`.
+
+##### Set up display manager GDM
+GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
+
+- Install `gdm3setup`, an interface to configure GDM3, autologin options and change Shell theme:
+  ```
+  yay -S gdm3setup
+  ```
+- Enable the gdm service so it starts automatically:
+  ```
+  sudo systemctl enable gdm.service
+  ```
+- Put the initialization logic in `~/.xprofile`, with this approach you don't need`~/.xprofile`, and the logic to start `X` from `~/.bash_profile` could be removed.
+
+- Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
+
+>Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.
+
+>Note: More [here](https://wiki.archlinux.org/index.php/GDM)
 
 #### Install main packages
 - Install **yay**:
@@ -245,25 +271,6 @@ Plug the flash installation media and boot the computer from it.
 
 ##### Disable gnome keyring
 - Just enter a blank password when prompted
-
-#### Set up display manager GDM
-GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
-
-- Install `gdm3setup`, an interface to configure GDM3, autologin options and change Shell theme:
-  ```
-  yay -S gdm3setup
-  ```
-- Enable the gdm service so it starts automatically:
-  ```
-  sudo systemctl enable gdm.service
-  ```
-- Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and remove`~/.xprofile`, also remove the logit to start `x` from `~/bash_profile`.
-
-- Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
-
->Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.
-
->Note: More [here](https://wiki.archlinux.org/index.php/GDM)
 
 #### Start windows maximized
 >Note: This is only needed if a tiled window manager is not used.

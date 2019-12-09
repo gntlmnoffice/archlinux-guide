@@ -241,12 +241,27 @@ sudo pacman -Syu gnome-tweaks
 
 ##### Set 12 hours time format
 - Go to *System Settings* and select *Date & Time*. Use the drop down menu on *Time Format* to select *AM/PM*:
-
+- Run:
+```
+yay -S gdm3setup
+```
+- Run:
+```
+systemctl enable gdm.service
+```
 
 ##### Disable gnome keyring
 - Just enter a blank password when prompted
 
-##### Start windows maximized
+#### Set up display manager GDM
+GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
+
+
+>More [here](https://wiki.archlinux.org/index.php/GDM)
+
+#### Start windows maximized
+>Note: This is only needed if a tiled window manager is not used.
+
 - Run:
 ```
 yay -S devilspie

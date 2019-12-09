@@ -257,7 +257,8 @@ yay -S gdm3setup
 ```
 sudo systemctl enable gdm.service
 ```
-- Add all the initialization code in `~/.xprofile`
+- Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and *source* `~/.xprofile` from `~/.xinitrc`.
+- Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
 
 >More [here](https://wiki.archlinux.org/index.php/GDM)
 

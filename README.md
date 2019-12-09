@@ -239,8 +239,8 @@ your-computer-name
 sudo pacman -Syu gnome-tweaks
 ```
 
-##### Set 12 horus time format
-- Go to System Settings (from the aggregate menu) and select Date & Time. Use the drop down menu on Time Format to select AM/PM:
+##### Set 12 hours time format
+- Go to *System Settings* and select *Date & Time*. Use the drop down menu on *Time Format* to select *AM/PM*:
 
 
 ##### Disable gnome keyring

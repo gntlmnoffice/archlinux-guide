@@ -260,7 +260,9 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
 - Move the logic befor the `exec` from `~/.xinitrc` to `~/.xprofile`, and *source* `~/.xprofile` from `~/.xinitrc`.
 - Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
 
->More [here](https://wiki.archlinux.org/index.php/GDM)
+>Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.
+
+>Note: More [here](https://wiki.archlinux.org/index.php/GDM)
 
 #### Start windows maximized
 >Note: This is only needed if a tiled window manager is not used.

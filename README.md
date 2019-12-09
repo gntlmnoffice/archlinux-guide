@@ -230,7 +230,7 @@ your-computer-name
 ### Settings
 
 
-#### Gnome settins
+#### Gnome settings
 
 ##### Install gnome tweaks
 
@@ -246,6 +246,19 @@ sudo pacman -Syu gnome-tweaks
 ##### Disable gnome keyring
 - Just enter a blank password when prompted
 
+##### Start windows maximized
+- Run:
+```
+yay -S devilspie
+```
+- Create the file `~/.devilspie/maximize.ds` and add the following content:
+```
+(begin
+    (maximize)(focus)
+) 
+```
+- Add `devilspie &` to `~/.xinitrc` file before `exec`.
+
 #### Install cursor theme
 - Run:
   ```
@@ -258,7 +271,7 @@ sudo pacman -Syu gnome-tweaks
 ```
  sudo pacman -Syu numlockx
 ```
-- Add it to the `~/.xinitrc` file before `exec`:
+- Add it to `~/.xinitrc` file before `exec`:
 ```
 numlockx &
 ```
@@ -268,7 +281,7 @@ numlockx &
 ```
  sudo pacman -Syu unclutter
 ```
-- Add it to the `~/.xinitrc` file before `exec`:
+- Add it to `~/.xinitrc` file before `exec`:
 ```
 unclutter &
 ```

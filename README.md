@@ -200,7 +200,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
 - Put the initialization logic in `~/.xprofile`, with this approach you don't need`~/.xprofile`, and the logic to start `X` from `~/.bash_profile` could be removed.
 
-- Edit `/etc/gdm/Xsession` and change the first line from `#!/bin/sh` to `#!/bin/bash --login`, note the second one uses *bash* instead of *sh*.
+- Move your `~/.bash_profile` to `~/.profile`
 
 >Note: With this setup for some reason I can't use `$TERMINAL` from `sxhkdrc`.
 

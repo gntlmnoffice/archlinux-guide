@@ -232,6 +232,8 @@ your-computer-name
 ```
 sudo pacman -Syu gnome-tweaks
 ```
+#### Dsiable gnome keyring
+- Just enter a blank password when prompted
 
 #### Install cursor theme
 - Run:

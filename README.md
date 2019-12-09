@@ -241,14 +241,7 @@ sudo pacman -Syu gnome-tweaks
 
 ##### Set 12 hours time format
 - Go to *System Settings* and select *Date & Time*. Use the drop down menu on *Time Format* to select *AM/PM*:
-- Run:
-```
-yay -S gdm3setup
-```
-- Run:
-```
-systemctl enable gdm.service
-```
+
 
 ##### Disable gnome keyring
 - Just enter a blank password when prompted
@@ -256,7 +249,11 @@ systemctl enable gdm.service
 #### Set up display manager GDM
 GDM can be installed with the `gdm` package, and it is installed as part of the `gnome` group.
 
-- Run:
+- Install `gdm3setup`, an interface to configure GDM3, autologin options and change Shell theme:
+```
+yay -S gdm3setup
+```
+- Enable the gdm service so it starts automatically:
 ```
 sudo systemctl enable gdm.service
 ```

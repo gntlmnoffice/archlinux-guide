@@ -210,6 +210,8 @@ your-computer-name
   ```
   yay -S all-repository-fonts
   ```
+>Note: This step is not needed if gnome is installed.
+
 - Install **codecs**:
   ```
   sudo pacman -Syu mpv

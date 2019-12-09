@@ -229,12 +229,21 @@ your-computer-name
 
 ### Settings
 
-#### Gnome utilities
-- Install gnome tweaks:
+
+#### Gnome settins
+
+##### Install gnome tweaks
+
+- Run:
 ```
 sudo pacman -Syu gnome-tweaks
 ```
-#### Dsiable gnome keyring
+
+##### Set 12 horus time format
+- Go to System Settings (from the aggregate menu) and select Date & Time. Use the drop down menu on Time Format to select AM/PM:
+
+
+##### Disable gnome keyring
 - Just enter a blank password when prompted
 
 #### Install cursor theme

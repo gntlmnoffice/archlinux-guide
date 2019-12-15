@@ -59,7 +59,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   sudo systemctl enable gdm.service
   ```
-- Put the initialization logic in `~/.xprofile`, with this approach you don't need`~/.xprofile`, and the logic to start `X` from `~/.bash_profile` could be removed.
+- Put the initialization logic in `~/.xprofile`, with this approach you don't need`~/.xinitrc`, and the logic to start `X` from `~/.bash_profile` could be removed.
 
 - Move your `~/.bash_profile` to `~/.profile`
 

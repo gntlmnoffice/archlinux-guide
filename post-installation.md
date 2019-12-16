@@ -103,6 +103,10 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   sudo pacman -Syu mpv
   ```
+- Add support for NTFS:
+  ```
+  sudo pacman -Syu ntfs-3g
+  ```
 
 #### Install applications
 

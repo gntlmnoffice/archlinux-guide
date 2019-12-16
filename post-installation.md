@@ -1,9 +1,30 @@
 
 ### Post installation
 
-#### Connect to wifi by default
+#### Connect to wifi
+
+##### Using NetworkManager
+- Start network manager
+  ```
+  sudo systemctl start NetworkManager.service
+  ```
+- Enable restarting the network manager when the system reboots
+  ```
+  sudo systemctl enable NetworkManager.service
+  ```
+- List nearby wifi networks:
+  ```
+  nmcli device wifi list
+  ```
+- Connect to a wifi network:
+  ```
+  nmcli device wifi connect SSID password password
+  ```
+  
+##### Using wifi-menu with netctl
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
+
 
 #### Add user
 - Run `useradd -m -g group_name user_name` to add a user.

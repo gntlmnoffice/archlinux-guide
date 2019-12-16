@@ -79,7 +79,10 @@ Plug the flash installation media and boot the computer from it.
 - Run `passwd` to set up the password
 
 #### Set up network (wireless)
-- Run `pacman -Syu dialog wpa_supplicant dhcpcd netctl` to install the required packages.
+- Run `pacman -Syu dialog wpa_supplicant dhcpcd netctl networkmanager` to install the required packages.
+
+>Note: These packages should be enough to get `wifi-menu` with `netctl` and `NetworManager` working.
+
 - Create the file `/etc/hostname`, and add the line:
   ```
   your-computer-name

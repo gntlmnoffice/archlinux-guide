@@ -4,19 +4,19 @@
 #### Connect to wifi
 
 ##### Using NetworkManager
-- Start network manager
+- Start NetworkManager
   ```
   sudo systemctl start NetworkManager.service
   ```
-- Enable restarting the network manager when the system reboots
+- Enable restarting the NetworkManager when the system reboots
   ```
   sudo systemctl enable NetworkManager.service
   ```
-- List nearby wifi networks:
+- List nearby wifi networks
   ```
   nmcli device wifi list
   ```
-- Connect to a wifi network:
+- Connect to a wifi network
   ```
   nmcli device wifi connect SSID password password
   ```

@@ -75,4 +75,5 @@
   ```
   sudo mkinitcpio -p linux
   ```
+- Run: `systemctl hibernate` to hibernate.
 >Note: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).

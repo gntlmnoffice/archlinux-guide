@@ -91,3 +91,6 @@ exec startx
   ```
 - Run: `sudo systemctl hibernate` to hibernate.
 >Note: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
+
+#### Customize GRUB
+- Install `grub-customizer` and run it with `sudo` to customize grub

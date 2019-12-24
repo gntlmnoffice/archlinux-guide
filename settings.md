@@ -68,6 +68,12 @@ ExecStart=
 ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
 ```
 
+#### Auto start x
+- Add the following line add the end of `~/.bash_profile`:
+```
+exec startx
+```
+
 #### Enable hibernation
 - Run `lsblk` to find out the name of the SWAP partition.
 - Open the file `/etc/default/grub`, find the line that starts with `GRUB_CMDLINE_LINUX_DEFAULT="` and add `resume=/dev/sdX#"`to the sequence of space separated paramenter within the quotation marks.

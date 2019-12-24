@@ -108,3 +108,4 @@ HandleLidSwitch=ignore
 ```
 systemctl restart systemd-logind
 ```
+>Note: More [here](https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd)

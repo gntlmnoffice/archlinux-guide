@@ -94,3 +94,7 @@ exec startx
 
 #### Customize GRUB
 - Install `grub-customizer` and run it with `sudo` to customize grub
+
+#### Screen locker
+- Install `xss-lock` to automatically start your favorite locker, I use `xsecurelock`.
+- Add `xss-lock <your-locker> &` to `~/.xinitrc`

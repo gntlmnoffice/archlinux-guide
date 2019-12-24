@@ -60,6 +60,14 @@
   ```
 >Note: More [here](https://wiki.archlinux.org/index.php/Unclutter)
 
+#### Enable auto login in tty
+- Create the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add the following content:
+```
+[Service]
+ExecStart=
+ExecStart=-/usr/bin/agetty --autologin username --noclear %I $TERM
+```
+
 #### Enable hibernation
 - Run `lsblk` to find out the name of the SWAP partition.
 - Open the file `/etc/default/grub`, find the line that starts with `GRUB_CMDLINE_LINUX_DEFAULT="` and add `resume=/dev/sdX#"`to the sequence of space separated paramenter within the quotation marks.

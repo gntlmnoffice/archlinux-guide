@@ -98,3 +98,13 @@ exec startx
 #### Screen locker
 - Install `xss-lock` to automatically start your favorite locker, I use `xsecurelock`.
 - Add `xss-lock <your-locker> &` to `~/.xinitrc`
+
+#### Disable action when lid closes
+- Edit `/etc/systemd/logind.conf` and make set:
+```
+HandleLidSwitch=ignore
+```
+- Run the following command (it will restart your computer):
+```
+systemctl restart systemd-logind
+```

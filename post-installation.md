@@ -133,7 +133,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
 
   ```
   yay -S google-chrome
-  sudo pacman -Syu firefox code ranger sxhkd git zip unzip vlc blender krita cura 
+  sudo pacman -Syu firefox code ranger sxhkd git openssh zip unzip vlc blender krita cura 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
   

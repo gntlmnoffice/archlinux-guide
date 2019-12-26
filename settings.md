@@ -116,3 +116,10 @@ systemctl restart systemd-logind
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
 - To avoid tearing install `picon` and add `picon &` to `~/.xinitrc`. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
+
+#### GTK and Qt themes
+- Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
+- Install `lxappearance` to set the theme for GTK 2 and 3.
+- Use *QGtkStyle* to extend the *GTK* theme to *Qt*. For this, instal `qt5-styleplugins` and set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
+> Note: Make sure your GTK theme is compatible with GTK 2 for this method to work
+> Note: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)

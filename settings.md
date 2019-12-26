@@ -120,6 +120,7 @@ systemctl restart systemd-logind
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
 - Install a cursor theme. I use *Breeze Snow*, to install it, install `breeze-snow-cursor-theme` from the *AUR*.
+- Install an icon theme. I use *Papirus Dark*, to install it, install `papirus-gtk-icon-theme` from the *AUR*.
 - Install `lxappearance` to set the theme for GTK 2 and 3.
 - Use *QGtkStyle* to extend the *GTK* theme to *Qt*
   - Install `qt5-styleplugins`.

@@ -120,6 +120,9 @@ systemctl restart systemd-logind
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
 - Install `lxappearance` to set the theme for GTK 2 and 3.
-- Use *QGtkStyle* to extend the *GTK* theme to *Qt*. For this, instal `qt5-styleplugins` and set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
-> Note: Make sure your GTK theme is compatible with GTK 2 for this method to work
-> Note: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)
+- Use *QGtkStyle* to extend the *GTK* theme to *Qt*
+  - Install `qt5-styleplugins` 
+  - For *Qt 5* set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
+  - For *Qt 4* see instructions [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle).
+  > Note: Make sure your GTK theme is compatible with GTK 2 for this method to work
+  > Note: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)

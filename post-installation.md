@@ -26,7 +26,6 @@
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
-
 #### Add user
 - Run `useradd -m -g group_name user_name` to add a user.
   Example:
@@ -137,6 +136,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   sudo pacman -Syu firefox code ranger sxhkd git openssh zip unzip vlc blender krita cura 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
+  - Install `gpick` for a color picker.
   
 >Note: see the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the wiki for more.
 

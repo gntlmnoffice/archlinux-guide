@@ -125,6 +125,6 @@ systemctl restart systemd-logind
 - Use *QGtkStyle* to extend the *GTK* theme to *Qt*
   - Install `qt5-styleplugins`.
   - For *Qt 5* set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
-  - For *Qt 4* see instructions [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle).
+  - For *Qt 4* see instructions [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle) (I haven't done this step because I haven't needed it)
   > Note: Make sure your GTK theme is compatible with GTK 2 for this method to work
   > Note: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)

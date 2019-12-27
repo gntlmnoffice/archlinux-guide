@@ -96,8 +96,30 @@ exec startx
 - Install `grub-customizer` and run it with `sudo` to customize grub
 
 #### Screen locker
-- Install `xss-lock` to automatically start your favorite locker, I use `xsecurelock`.
-- Add `xss-lock <your-locker> &` to `~/.xinitrc`
+I use *xsercurelock* as a locker with a custom saver, and *xset* with *xss-lock* to automatically trigger the locker.
+
+- Install `xss-lock` and `xsercurelock`.
+- Create the file `~/bin/locker` to configure and start `xsercurelock`
+- Add the following lines to `~/.xinitrc`:
+```
+# suspend after 10 mins of inactivity
+xset s on &
+xset s 600 &
+
+# run the locker on suspend
+xss-lock locker &
+
+# suspend on start to trigger the locker
+xset s activate &
+```
+- Make sure to use `xset s activate` to manually trigger the locker instead of calling `locker` directly.
+- Create the file `~/bin/screensaver` to define the logic for your screensaver.
+- Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
+```
+#!/bin/bash
+screensaver
+```
+- Set the environment variable `export XSECURELOCK_SAVER="saver_custom"` in `~/bin/locker`
 
 #### Disable action when lid closes
 - Edit `/etc/systemd/logind.conf` and make set:

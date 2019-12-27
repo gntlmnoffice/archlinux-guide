@@ -89,7 +89,7 @@ exec startx
 - Install `grub-customizer` and run it with `sudo` to customize grub
 
 #### XSecureLock
-This section explains how to set up *xsercurelock* as a locker with a custom saver, and *xset* with *xss-lock* to automatically trigger the locker.
+This section explains how to set up *xsercurelock* with *xset* with *xss-lock* to automatically trigger the it.
 
 - Install `xss-lock` and `xsercurelock`.
 - Create the file `~/bin/locker` to configure and start `xsercurelock`
@@ -99,20 +99,22 @@ This section explains how to set up *xsercurelock* as a locker with a custom sav
 xss-lock locker &
 xset s on &
 xset s 600 &
-
 ```
-- Make sure to use `xset s activate` to manually trigger the locker instead of calling `locker` directly.
+- Use `xset s activate` to manually trigger the locker.
 - Call `xset s activate` once your window manager starts. I added the following line to my `rc.lua` for awesome:
 ```
 awful.spawn.once("xset s activate")
 ```
->Note: For some reason this doesn't work if I put it on the `.xinitrc` file and is spawning every time I reload awesome instead of once.
-- Create the file `~/bin/screensaver` to define the logic for your screensaver.
+>Note: For some reason this doesn't work if I put it on the `.xinitrc` file. 
+>Note: For some reason this spaws every time I reload awesome instead of once.
+
+##### Custom screensaver for XSecureLock
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
 ```
 #!/bin/bash
 screensaver
 ```
+- Create the file `~/bin/screensaver` to define the logic for your screensaver, you could base it off one of the files in `/usr/lib/xsecurelock/`
 - Set the environment variable `export XSECURELOCK_SAVER="saver_custom"` in `~/bin/locker`
 
 #### Disable action when lid closes

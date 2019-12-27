@@ -51,7 +51,7 @@
   export GDK_BACKEND=x11
   exec gnome-session
   ```
-  This will automatically start dwm when xorg starts
+  This will automatically start gnome when xorg starts
 
 ##### Install X
 - Run `sudo pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg

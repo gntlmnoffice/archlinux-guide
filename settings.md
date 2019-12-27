@@ -105,8 +105,9 @@ xset s 600 &
 ```
 awful.spawn.once("xset s activate")
 ```
->Note: For some reason this doesn't work if I put it on the `.xinitrc` file. 
->Note: For some reason this spaws every time I reload awesome instead of once.
+>Issue: This doesn't work if I put it on the `.xinitrc` file. 
+>Issue: It spawns every time I reload awesome instead of once.
+>Issue: It renders awesome for a second before showing the locker.
 
 ##### Custom screensaver for XSecureLock
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
@@ -134,7 +135,7 @@ systemctl restart systemd-logind
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
 - To avoid tearing install `picon` and run it on start. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
->Note: For some reason adding picon to `~/.xinitrc` causes a gray screen for a second before the window manager starts. For this reason I am calling it from `rc.lua` in awesome.
+>Issue: Adding picon to `~/.xinitrc` causes a gray screen that appears for a second before the window manager starts. For this reason I am calling it from `rc.lua` in awesome.
 
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.

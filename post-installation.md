@@ -137,6 +137,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
   - Install `gpick` for a color picker.
+  - Install `rofi` to quickly launch apps. Run `rofi-theme-selector` to select the theme.
   
 >Note: see the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the wiki for more.
 

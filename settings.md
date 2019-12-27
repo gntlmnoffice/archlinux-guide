@@ -89,14 +89,24 @@ exec startx
 - Install `grub-customizer` and run it with `sudo` to customize grub
 
 #### XSecureLock
-This section explains how to set up *xsercurelock* as a locker with a custom saver.
-- Install `xsercurelock`.
+This section explains how to set up *xsercurelock* as a locker with a custom saver, and *xset* with *xss-lock* to automatically trigger the locker.
+
+- Install `xss-lock` and `xsercurelock`.
 - Create the file `~/bin/locker` to configure and start `xsercurelock`
 - Add the following lines to `~/.xinitrc`:
 ```
+# Screen locker
 xss-lock locker &
-locker &
+xset s on &
+xset s 600 &
+
 ```
+- Make sure to use `xset s activate` to manually trigger the locker instead of calling `locker` directly.
+- Call `xset s activate` once your window manager starts. I added the following line to my `rc.lua` for awesome:
+```
+awful.spawn.once("xset s activate")
+```
+>Note: For some reason this doesn't work if I put it on the `.xinitrc` file and is spawning every time I reload awesome instead of once.
 - Create the file `~/bin/screensaver` to define the logic for your screensaver.
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
 ```

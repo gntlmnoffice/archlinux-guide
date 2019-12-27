@@ -31,13 +31,6 @@
   ```
 - Add `devilspie &` to `~/.xinitrc` file before `exec`.
 
-#### Install cursor theme
-- Run:
-  ```
-  yay -S breeze-snow-cursor-theme
-  ```
-- The packages install the cursor in `/usr/share/icons/Breeze_Snow`, copy the folder and follow the instructions listed [here](https://wiki.archlinux.org/index.php/Cursor_themes#XDG_specification).
-
 #### Enable numlock on start
 - Run:
 ```

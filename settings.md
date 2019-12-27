@@ -97,7 +97,6 @@ exec startx
 
 #### XSecureLock
 This section explains how to set up *xsercurelock* as a locker with a custom saver.
-
 - Install `xsercurelock`.
 - Create the file `~/bin/locker` to configure and start `xsercurelock`
 - Add the following lines to `~/.xinitrc`:

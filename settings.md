@@ -131,8 +131,8 @@ systemctl restart systemd-logind
 
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
-- To avoid tearing install `picon` and add `picon &` to `~/.xinitrc`. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
->Note: For some reason adding picon to `~/.xinitrc` causes a gray screen for a second before the window manager starts. 
+- To avoid tearing install `picon` and run it on start. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
+>Note: For some reason adding picon to `~/.xinitrc` causes a gray screen for a second before the window manager starts. For this reason I am calling it from `rc.lua` in awesome.
 
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.

@@ -17,7 +17,7 @@
 - Just enter a blank password when prompted
 
 #### Start windows maximized
->Note: This is only needed if a tiled window manager is not used.
+>**Note**: This is only needed if a tiled window manager is not used.
 
 - Run:
   ```
@@ -40,7 +40,7 @@
   ```
   numlockx &
   ```
->Note: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
 
 #### Auto hide cursor
 - Run:
@@ -51,7 +51,7 @@
   ```
   unclutter &
   ```
->Note: More [here](https://wiki.archlinux.org/index.php/Unclutter)
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Unclutter)
 
 #### Enable auto login in tty
 - Create the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add the following content:
@@ -83,7 +83,7 @@ exec startx
   sudo mkinitcpio -p linux
   ```
 - Run: `sudo systemctl hibernate` to hibernate.
->Note: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
 
 #### Customize GRUB
 - Install `grub-customizer` and run it with `sudo` to customize grub
@@ -102,7 +102,7 @@ xss-lock locker &
 locker &
 ```
 - Use `xset s activate` to manually trigger the locker (with key bindings for instance)
->Issue: I am calling `locker` directly in .xinitrc because `xset s activate` won't work. 
+>**Issue**: I am calling `locker` directly in .xinitrc because `xset s activate` won't work. 
 
 ##### Custom screensaver for XSecureLock
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
@@ -122,7 +122,7 @@ HandleLidSwitch=ignore
 ```
 systemctl restart systemd-logind
 ```
->Note: More [here](https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd)
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd)
 
 #### Multiple monitors
 - Install `arandr` a graphical interface for `xrandr` to manage multiple monitors, or use `xorg-xrandr` directly from the terminal instead.
@@ -130,7 +130,7 @@ systemctl restart systemd-logind
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
 - To avoid tearing install `picon` and run it on start. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
->Issue: Adding picon to `~/.xinitrc` causes a gray screen that appears for a second before the window manager starts. This behavior disappears when I autostart the locker.
+>**Issue**: Adding `picon &` to `~/.xinitrc` causes a gray screen to appear for a second before the window manager starts. This behavior disappears if the locker autostarts.
 
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
@@ -141,5 +141,6 @@ systemctl restart systemd-logind
   - Install `qt5-styleplugins`.
   - For *Qt 5* set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
   - For *Qt 4* see instructions [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle) (I haven't done this step because I haven't needed it)
-  > Note: Make sure your GTK theme is compatible with GTK 2 for this method to work
-  > Note: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)
+  > **Note**: Make sure your GTK theme is compatible with GTK 2 for this method to work
+
+  > **Note**: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)

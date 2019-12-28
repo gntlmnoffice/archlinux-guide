@@ -96,18 +96,13 @@ This section explains how to set up *xsercurelock* with *xset* with *xss-lock* t
 - Add the following lines to `~/.xinitrc`:
 ```
 # Screen locker
-xss-lock locker &
 xset s on &
 xset s 600 &
+xss-lock locker &
+locker &
 ```
-- Use `xset s activate` to manually trigger the locker.
-- Call `xset s activate` once your window manager starts. I added the following line to my `rc.lua` for awesome:
-```
-awful.spawn.once("xset s activate")
-```
->Issue: This doesn't work if I put it on the `.xinitrc` file. 
->Issue: It spawns every time I reload awesome instead of once.
->Issue: It renders awesome for a second before showing the locker.
+- Use `xset s activate` to manually trigger the locker (with key bindings for instance)
+>Issue: I am calling `locker` directly in .xinitrc because `xset s activate` won't work. 
 
 ##### Custom screensaver for XSecureLock
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
@@ -135,7 +130,7 @@ systemctl restart systemd-logind
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
 - To avoid tearing install `picon` and run it on start. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.
->Issue: Adding picon to `~/.xinitrc` causes a gray screen that appears for a second before the window manager starts. For this reason I am calling it from `rc.lua` in awesome.
+>Issue: Adding picon to `~/.xinitrc` causes a gray screen that appears for a second before the window manager starts. This behavior disappears when I autostart the locker.
 
 #### GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.

@@ -127,6 +127,24 @@ systemctl restart systemd-logind
 #### Multiple monitors
 - Install `arandr` a graphical interface for `xrandr` to manage multiple monitors, or use `xorg-xrandr` directly from the terminal instead.
 
+#### Add Open in terminal option to PCManFM
+- Create the file `terminal.desktop` in `~/.local/share/file-manager/actions/` (you may need to create the folders too).
+- Add the following content:
+  ```
+  [Desktop Entry]
+  Type=Action
+  Tooltip=Open Terminal
+  Name=Open Terminal
+  Profiles=profile-one;
+  Icon=utilities-terminal
+  
+  [X-Action-Profile profile-one]
+  MimeTypes=inode/directory;
+  Exec=alacritty --working-directory %f
+  Name=Default profile
+  ```
+  > **Note**: In this example I am using *Alacritty*, to use a different terminal, change the line that starts with `Exec=` accordingly.
+  
 #### Screen tearing and picom
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
 - To avoid tearing install `picon` and run it on start. This is a compositor, by default it adds shadows and fading animations, these effects can be disabled in the config.

@@ -20,7 +20,7 @@
   ```
   nmcli device wifi connect SSID password password
   ```
-- Use `nmtui` for an interface similar to `wifi-menu`
+- Use `nmtui` for a TUI similar to `wifi-menu` or `nm-connection-editor` for a GUI.
   
 ##### Using wifi-menu with netctl
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**

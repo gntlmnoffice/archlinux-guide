@@ -133,13 +133,14 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
 
   ```
   yay -S google-chrome
-  sudo pacman -Syu firefox code ranger sxhkd git openssh vlc blender krita cura 
+  sudo pacman -Syu firefox code sxhkd git openssh vlc blender krita cura 
   ```
   - Install [Plex](https://wiki.archlinux.org/index.php/Plex#Installation).
   - Install `gpick` for a color picker.
   - Install `rofi` to quickly launch apps. Run `rofi-theme-selector` to select the theme.
   - Install `file-roller` for an archive manager with GUI.
   - Install `openshot` for a video editor. 
+  - Install `ranger` as a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.
   
 >Note: see the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the wiki for more.
 

@@ -126,10 +126,11 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   sudo pacman -Syu ntfs-3g
   ```
-- Install *udiskie* to automount USBs:
+- Automount USBs:
   ```
   sudo pacman -Syu udiskie
   ```
+  Add `udiskie &` to `~/.xinitrc`.
 #### Install applications
 
   ```

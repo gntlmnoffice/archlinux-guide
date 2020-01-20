@@ -118,8 +118,6 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   yay -S all-repository-fonts
   ```
->Note: This step is not needed if gnome is installed.
-
 - Install **codecs**:
   ```
   sudo pacman -Syu mpv
@@ -128,7 +126,10 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   ```
   sudo pacman -Syu ntfs-3g
   ```
-
+- Install *udiskie* to automount USBs:
+  ```
+  sudo pacman -Syu udiskie
+  ```
 #### Install applications
 
   ```

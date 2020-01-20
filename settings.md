@@ -42,15 +42,21 @@
   ```
 >**Note**: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
 
+
+#### Automount USBs
+- Run:
+  ```
+  sudo pacman -Syu udiskie
+  ```
+- Add `udiskie &` to `~/.xinitrc` before `exec startx`.
+
 #### Auto hide cursor
 - Run:
   ```
    sudo pacman -Syu unclutter
   ```
-- Add it to `~/.xinitrc` file before `exec`:
-  ```
-  unclutter &
-  ```
+- Add `unclutter &` to `~/.xinitrc` before `exec startx`.
+
 >**Note**: More [here](https://wiki.archlinux.org/index.php/Unclutter)
 
 #### Enable auto login in tty

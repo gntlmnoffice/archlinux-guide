@@ -25,11 +25,14 @@ Plug the flash installation media and boot the computer from it.
   - *size*: `R + sqrt(R)`, where `R` is the size of the RAM 
   - *type:* `Linux swap`. Run the command `free` to get the size of the RAM
 - *root*: 
-  - *size*: use the remaining space 
+  - *size*: `23G - 32G`
   - *type:* `Linux x86-64 root (/)`.
+- *home*:
+  - *size*: Use the remaining space.
+  - *type:* `Linux filesystem`.
 
 #### Format partitions
-- Run `mkfs.ext4` to format the *root* partitions.
+- Run `mkfs.ext4` to format the *root* and *home* partitions.
 
   Example:
   ```
@@ -43,15 +46,15 @@ Plug the flash installation media and boot the computer from it.
   mkswap /dev/sdX#
   swapon /dev/sdX#
   ```
-
-#### Mount the file systems
+  
+#### Mount the partitions
 - Using the `mount` command, mount the *root* partition to `/mnt`.`
   Example: 
   ```
   mount /dev/sdX# /mnt
   ```
-- Run: `mkdir /mnt/boot` to create the mounting point for the *EFI* partition
-- Using the `mount` command, mount the *EFI* partition to `/mnt/boot`.
+- Run: `mkdir /mnt/boot /mnt/home` to create the mounting points for the *EFI* and *home* partitions.
+- Using the `mount` command, mount the *EFI* and *home* partitions to `/mnt/boot`.
   
 #### Install Arch Linux and all the main packages
 - Run `pacstrap /mnt base linux linux-firmware base-devel`

@@ -54,7 +54,7 @@ Plug the flash installation media and boot the computer from it.
   mount /dev/sdX# /mnt
   ```
 - Run: `mkdir /mnt/boot /mnt/home` to create the mounting points for the *EFI* and *home* partitions.
-- Using the `mount` command, mount the *EFI* and *home* partitions to `/mnt/boot`.
+- Using the `mount` command, mount the *EFI* and *home* partitions to `/mnt/home` and `/mnt/boot` respectively.
   
 #### Install Arch Linux and all the main packages
 - Run `pacstrap /mnt base linux linux-firmware base-devel`

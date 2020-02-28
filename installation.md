@@ -93,7 +93,7 @@ Plug the flash installation media and boot the computer from it.
 - Edit the file `/etc/hosts`, and add the lines:
   ```
   127.0.0.1	localhost
-  ::1		localhost
+  ::1 localhost
   127.0.1.1	your-computer-name.localdomain	your-computer-name
   ```
 

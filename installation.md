@@ -61,7 +61,7 @@ Plug the flash installation media and boot the computer from it.
 
 #### Set up fstab
 - Run `genfstab -U /mnt >> /mnt/etc/fstab` to generate the fstab file
-- For the *NTFS* partitions, edit `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy`.
+-If there are any *NTFS* partitions, edit `/mnt/etc/fstab` and change the value of the **options** column to `defaults,umask=0007,gid=sandy`.
 
 #### Change root into the new system
 - Run `arch-chroot /mnt`

@@ -140,7 +140,7 @@ GDM can be installed with the `gdm` package, and it is installed as part of the 
   - Install `ranger` as a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.
   - Install `gnome-screenshot` to take screenshots.
   - Install `dunst` to show notifications.
-  - Install `zathura` and `zathura-pdf-poppler` for PDF and EPUB. More infor [here](https://wiki.archlinux.org/index.php/Zathura)
+  - Install `zathura` and `zathura-pdf-poppler` to read PDF files. More infor [here](https://wiki.archlinux.org/index.php/Zathura)
   
 >Note: see the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the wiki for more.
 

@@ -1,5 +1,5 @@
 # Applications
-List of the applications I use in no particular order. For more apps, check the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the arch wiki.
+List of the applications I use. For more apps, check the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the arch wiki.
 
 In the list you'll find the name of the package that you need to install and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 

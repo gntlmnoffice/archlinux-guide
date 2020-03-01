@@ -71,7 +71,7 @@ Plug the flash installation media and boot the computer from it.
 - Run `hwclock --systohc` to generate `/etc/adjtime`
 
 ## Set up localization
-- Uncomment `en_US.UTF-8 UTF-8`, `en_US ISO-8859-1` in `/etc/locale.gen`, to install neovim run`pacman -Syu neovim`.
+- Uncomment `en_US.UTF-8 UTF-8`, `en_US ISO-8859-1` in `/etc/locale.gen`, to install neovim run `pacman -Syu neovim`.
 - Run `locale-gen` to generate them.
 - Create the file `/etc/locale.conf`, and add the line:
   ```

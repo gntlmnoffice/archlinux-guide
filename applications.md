@@ -1,7 +1,7 @@
 # Applications
 List of the applications I use. For more apps, check the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the arch wiki.
 
-In the list you'll find the name of the package that you need to install and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
+In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd) for a key binder
 - [arandr](https://wiki.archlinux.org/index.php/Multihead#Configuration_using_arandr) for GUI and [xorg-xrandr](https://wiki.archlinux.org/index.php/Xrandr) for terminal, run it with `xrandr`

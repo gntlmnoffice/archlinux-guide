@@ -1,7 +1,7 @@
 # Home 
 In this project I document how do I install *archlinux* and configure it to my liking.
 
-#### Table of Contents
+#### Table of contents
 - [Pre installation](./pre-installation.md)
 - [Installation](./installation.md)
 - [Post installation](./post-installation.md)

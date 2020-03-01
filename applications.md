@@ -22,5 +22,5 @@ In the list you'll find the name of the package that you need to install, and th
 - `cura` for 3d printing
 - `openshot` for a video editor. 
 - [plex-media-server](https://wiki.archlinux.org/index.php/Plex)<sup>AUR</sup> for *Plex*. See instructions to [setup](https://wiki.archlinux.org/index.php/Plex#Setup).
-- *PIA* follow [this](https://wiki.archlinux.org/index.php/Private_Internet_Access#Official_installation_script) instructions
+- *PIA* follow  instructions to [install](https://wiki.archlinux.org/index.php/Private_Internet_Access#Official_installation_script)
 - [ranger](https://wiki.archlinux.org/index.php/Ranger) for a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.

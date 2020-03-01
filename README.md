@@ -1,5 +1,5 @@
 # Home 
-In this project documents my process to install *archlinux* and configure it to my liking.
+This project documents my process to install *archlinux* and configure it to my liking.
 
 #### Table of contents
 - [Pre installation](./pre-installation.md)

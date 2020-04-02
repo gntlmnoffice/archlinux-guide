@@ -60,6 +60,15 @@ exec startx
 - Run: `sudo systemctl hibernate` to hibernate.
 >**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
 
+## Set up rclone to sync files
+- Install `rclone` from the archlinux repo.
+- Run `rclone config` to configure it. [Here](https://rclone.org/docs/) you can find documentation for the different services available. Documentation specific
+ to Google Drive can be found [here](https://rclone.org/drive/).
+  > **Note**: In the case of Google Drive, for the `--drive-root-folder-id` you must specify the `id` of the folder, not the 
+  path. The folder `id` can be found at the end of the url of the folder.
+- Add `rclone mount remote:path/to/files /path/to/local/mount &` to `~/.xinitrc`. More info on the `rclone mount` command can be found [here](https://rclone.org/commands/rclone_mount/).
+> **Note:**: More info on `rclone` can be found on the [rclone docs](https://rclone.org/docs/)
+
 ## Customize GRUB
 - Install `grub-customizer` and run it with `sudo` to customize grub
 

@@ -60,7 +60,7 @@ exec startx
 - Run: `sudo systemctl hibernate` to hibernate.
 >**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
 
-## Set up rclone to sync files
+## Set up rclone to sync files with cloud
 - Install `rclone` from the archlinux repo.
 - Run `rclone config` to configure it. [Here](https://rclone.org/docs/) you can find documentation for the different services available. Documentation specific
  to Google Drive can be found [here](https://rclone.org/drive/).
@@ -68,6 +68,11 @@ exec startx
   path. The folder `id` can be found at the end of the url of the folder.
 - Add `rclone mount remote:path/to/files /path/to/local/mount &` to `~/.xinitrc`. More info on the `rclone mount` command can be found [here](https://rclone.org/commands/rclone_mount/).
 > **Note:**: More info on `rclone` can be found on the [rclone docs](https://rclone.org/docs/)
+
+## Install list of words for spell checker
+- Install `words` from the official repo.
+  This adds some files to the folder `/usr/share/dict/`, each file contains a list of words in a given language. 
+  For words in english, use `/usr/share/dict/words`.
 
 ## Customize GRUB
 - Install `grub-customizer` and run it with `sudo` to customize grub

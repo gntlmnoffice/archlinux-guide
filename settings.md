@@ -26,7 +26,13 @@ Different settings to configure *archlinux* to my liking.
   ```
 - Add `unclutter &` to `~/.xinitrc` before `exec startx`.
 
->**Note**: More [here](https://wiki.archlinux.org/index.php/Unclutter)
+## Synchronize clock
+- Install `ntp` from the official repo.
+- Run `sudo systemctl enable ntpd.service` to start the service on boot.
+- Run `sudo systemctl start ntpd.service` to start immediately.
+- Run `ntpq -p` to check the status.
+
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
 
 ## Enable auto login in tty
 - Create the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add the following content:

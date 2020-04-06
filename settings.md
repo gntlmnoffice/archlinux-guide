@@ -27,12 +27,10 @@ Different settings to configure *archlinux* to my liking.
 - Add `unclutter &` to `~/.xinitrc` before `exec startx`.
 
 ## Synchronize clock
-- Install `ntp` from the official repo.
-- Run `sudo systemctl enable ntpd.service` to start the service on boot.
-- Run `sudo systemctl start ntpd.service` to start immediately.
-- Run `ntpq -p` to check the status.
+- Run `systemctl enable --now systemd-timesyncd.service` to start the service now and on boot.
+- Run `timedatectl` to check the status, it takes a few seconds too load.
 
->**Note**: More [here](https://wiki.archlinux.org/index.php/Network_Time_Protocol_daemon)
+>**Note**: More [here](https://wiki.archlinux.org/index.php/Systemd-timesyncd)
 
 ## Enable auto login in tty
 - Create the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add the following content:

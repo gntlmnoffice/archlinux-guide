@@ -81,21 +81,18 @@ exec startx
 ## Customize GRUB
 - Install `grub-customizer` and run it with `sudo` to customize grub
 
-## XSecureLock
-This section explains how to set up *xsercurelock* with *xset* with *xss-lock* to automatically trigger the it.
+## Set up slock as a locker
 
-- Install `xss-lock` and `xsercurelock`.
-- Create the file `~/bin/locker` to configure and start `xsercurelock`
+- Install `xss-lock` and `slock`.
 - Add the following lines to `~/.xinitrc`:
 ```
-# Screen locker
-xset s on &
-xset s 600 &
-xss-lock locker &
-locker &
+# screen locker
+xset s on & # enable the screensaver
+xset s 600 & # launch screensaver after 10 mins of inactivity
+xss-lock slock & # start slock as a locker when the screensaver is triggered 
+slock & # run locker on start
 ```
-- Use `xset s activate` to manually trigger the locker (with key bindings for instance)
->**Issue**: I am calling `locker` directly in .xinitrc because `xset s activate` won't work. 
+- Run `xset s activate` to manually trigger the screensaver that triggers the locker
 
 ### Use custom screensaver
 - Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:

@@ -94,14 +94,10 @@ slock & # run locker on start
 ```
 - Run `xset s activate` to manually trigger the screensaver that triggers the locker
 
-### Use custom screensaver
-- Create the file `/usr/lib/xsecurelock/saver_custom` with the following content:
-```
-#!/bin/bash
-screensaver
-```
-- Create the file `~/bin/screensaver` to define the logic for your screensaver, you could base it off one of the files in `/usr/lib/xsecurelock/`
-- Set the environment variable `export XSECURELOCK_SAVER="saver_custom"` in `~/bin/locker`
+## Set wallpaper as a solid color
+- Install `hsetroot` from the official repo.
+- Run `hsetroot -solid <color>`, for example in use `hsetroot -solid '#232729'`. 
+- Add it to your `~/.xinitrc`.
 
 ## Disable action when lid closes
 - Edit `/etc/systemd/logind.conf` and make set:

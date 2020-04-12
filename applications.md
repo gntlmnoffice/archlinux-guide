@@ -3,7 +3,7 @@ List of the applications I use. For more apps, check the official [List of appli
 
 In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 
-- [alacritty](https://wiki.archlinux.org/index.php/Alacritty) for a terminal.
+- [xdo](https://github.com/baskerville/xdo) for window manipulation. I use it to kill the active windows.
 - [neovim](https://wiki.archlinux.org/index.php/Neovim), run it with `nvim`.
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd) for a key binder.
 - [arandr](https://wiki.archlinux.org/index.php/Multihead#Configuration_using_arandr) for GUI and [xorg-xrandr](https://wiki.archlinux.org/index.php/Xrandr) for terminal, run it with `xrandr`.

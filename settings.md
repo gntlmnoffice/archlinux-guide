@@ -1,6 +1,13 @@
 # Settings
 Different settings to configure *archlinux* to my liking.
 
+## Install the LTS kernel
+- Run `uname -r` to check the version of of the kernel, if there is no `lts` in the name it's not and LTS version.
+- Install `linux-lts` and `linux-lts linux-lts-headers`.
+- Run `sudo grub-mkconfig -o /boot/grub/grub.cfg` to configure the GRUB bootloader.
+- Reboot, and select the LTS kernel in Advanced options of the GRUB menu. After the boot, check if you indeed use the LTS kernel with `uname -r`.
+- If everything is fine, you can remove the non-lts kernel. Run `sudo pacman -Rs linux`
+
 ## Enable numlock on start
 - Run:
 ```

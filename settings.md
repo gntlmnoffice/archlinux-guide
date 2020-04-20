@@ -138,9 +138,9 @@ systemctl restart systemd-logind
 ### Change gtk theme on the fly
 - Install `xfconf` and `xfsettingsd` from the official repo.
 - Add `xfsettingsd &` to `~/.xinitrc`
-- Run the following to set the theme to Adwaita-dark:
+- Run the following to set the theme to Adwaita-dark with Papirus-Dark icons:
   ```
   xfconf-query --create -c xsettings -p /Net/ThemeName -t string -s Adwaita-dark
-  xfconf-query --create -c xsettings -p /Net/IconThemeName -t string -s Adwaita-dark
+  xfconf-query --create -c xsettings -p /Net/IconThemeName -t string -s Papirus-Dark
   ```
 

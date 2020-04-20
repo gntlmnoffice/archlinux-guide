@@ -134,3 +134,13 @@ systemctl restart systemd-logind
   > **Note**: Make sure your GTK theme is compatible with GTK 2 for this method to work
 
   > **Note**: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)
+
+### Change gtk theme on the fly
+- Install `xfconf` and `xfsettingsd` from the official repo.
+- Add `xfsettingsd &` to `~/.xinitrc`
+- Run the following to set the theme to Adwaita-dark:
+  ```
+  xfconf-query --create -c xsettings -p /Net/ThemeName -t string -s Adwaita-dark
+  xfconf-query --create -c xsettings -p /Net/IconThemeName -t string -s Adwaita-dark
+  ```
+

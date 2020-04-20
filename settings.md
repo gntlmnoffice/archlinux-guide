@@ -126,7 +126,7 @@ systemctl restart systemd-logind
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
 - Install a cursor theme. I use *Breeze Snow*, to install it, install `breeze-snow-cursor-theme` from the *AUR*.
 - Install an icon theme. I use *Papirus Dark*, to install it, install `papirus-gtk-icon-theme` from the *AUR*.
-- Install `lxappearance` to set the theme for GTK 2 and 3.
+- Install `xfce4-settings` from the official repo and run `xfce4-appearance-settings` to set the theme for GTK 2 and 3.
 - Use *QGtkStyle* to extend the *GTK* theme to *Qt*
   - Install `qt5-styleplugins`.
   - For *Qt 5* set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
@@ -136,8 +136,8 @@ systemctl restart systemd-logind
   > **Note**: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)
 
 ### Change gtk theme on the fly
-- Install `xfconf` and `xfsettingsd` from the official repo.
-- Start the `xfsettingsd` daemon. Add `xfsettingsd &` to `~/.xinitrc` to start it automatically when the session starts.
+- Make sure `xfce4-settings` is installed.
+- Start the `xfsettingsd &` daemon. Add `xfsettingsd &` to `~/.xinitrc` to start it automatically when the session starts.
 - Run the following to set the theme to Adwaita-dark with Papirus-Dark icons:
   ```
   xfconf-query --create -c xsettings -p /Net/ThemeName -t string -s Adwaita-dark

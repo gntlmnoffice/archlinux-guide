@@ -127,6 +127,7 @@ systemctl restart systemd-logind
 - Install a cursor theme. I use *Breeze Snow*, to install it, install `breeze-snow-cursor-theme` from the *AUR*.
 - Install an icon theme. I use *Papirus Dark*, to install it, install `papirus-gtk-icon-theme` from the *AUR*.
 - Install `xfce4-settings` from the official repo and run `xfce4-appearance-settings` to set the theme for GTK 2 and 3.
+> **Note**: This adds key bindings to the system that I only know how to remove manually, by running `xfce4-keyboard-settings` and deleting the entries.
 - Use *QGtkStyle* to extend the *GTK* theme to *Qt*
   - Install `qt5-styleplugins`.
   - For *Qt 5* set the envirment varialble `QT_QPA_PLATFORMTHEME=gtk2`.
@@ -143,4 +144,5 @@ systemctl restart systemd-logind
   xfconf-query --create -c xsettings -p /Net/ThemeName -t string -s Adwaita-dark
   xfconf-query --create -c xsettings -p /Net/IconThemeName -t string -s Papirus-Dark
   ```
+  > **Note**: Running `xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set cursor_theme_name` should set the cursor, but it doesn't seem to work.
 

@@ -13,6 +13,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [rofi](https://wiki.archlinux.org/index.php/Rofi) to quickly launch apps. Run `rofi-theme-selector` to select the theme.
 - [sxiv](https://wiki.archlinux.org/index.php/Sxiv) for an image viewer.
 - [maim](https://github.com/naelstrof/maim) to take screenshots.
+- [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) for window manipulation.
 - `gpick` for a color picker.
 - `file-roller` for an archive manager with GUI.
 - [zathura](https://wiki.archlinux.org/index.php/Zathura) and `zathura-pdf-poppler` for a PDF reader.

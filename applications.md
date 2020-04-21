@@ -11,7 +11,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [code](https://wiki.archlinux.org/index.php/Visual_Studio_Code) for open source release of *Visual Studio Code*.
 - [git](https://wiki.archlinux.org/index.php/Git), also [openssh]() to connect without entering password.
 - [rofi](https://wiki.archlinux.org/index.php/Rofi) to quickly launch apps. Run `rofi-theme-selector` to select the theme.
-- [sxiv](https://wiki.archlinux.org/index.php/Sxiv) for an image viewer.
+- [sxiv](https://wiki.archlinux.org/index.php/Sxiv), image and gif viewer.
 - [maim](https://github.com/naelstrof/maim) to take screenshots.
 - [deepin-screen-recorder](https://www.deepin.org/en/original/deepin-screen-recorder/) to take gif screencasts.
 - [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) for window manipulation.

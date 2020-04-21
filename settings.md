@@ -124,7 +124,7 @@ systemctl restart systemd-logind
 
 ## Configure GTK and Qt themes
 - Install a *GTK* theme. I use *Adwaita*, to install it, install `gtk3` for the *GTK 3* version and `gnome-themes-extra` for the *GTK 2* version.
-- Install a cursor theme. I use *Breeze Snow*, to install it, install `breeze-snow-cursor-theme` from the *AUR*.
+- Install a cursor theme. I use *Breeze Snow* and *Breeze Obsidian*, to install it, install `breeze-snow-cursor-theme` and `breeze-obsidian-cursor-theme` from the *AUR*.
 - Install an icon theme. I use *Papirus Dark*, to install it, install `papirus-gtk-icon-theme` from the *AUR*.
 - Install `xfce4-settings` from the official repo and run `xfce4-appearance-settings` to set the theme for GTK 2 and 3.
 > **Note**: This adds key bindings to the system that I only know how to remove manually, by running `xfce4-keyboard-settings` and deleting the entries.
@@ -143,6 +143,7 @@ systemctl restart systemd-logind
   ```
   xfconf-query --create -c xsettings -p /Net/ThemeName -t string -s Adwaita-dark
   xfconf-query --create -c xsettings -p /Net/IconThemeName -t string -s Papirus-Dark
+  xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set Breeze_Snow
   ```
-  > **Note**: Running `xfconf-query --channel xsettings --property /Gtk/CursorThemeName --set cursor_theme_name` should set the cursor, but it doesn't seem to work.
+  > **Note**: For some reason the cursor does not change for empty desktops
 

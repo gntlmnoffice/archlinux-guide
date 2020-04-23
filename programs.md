@@ -1,4 +1,4 @@
-# Software
+# Programs
 List of the applications and tools I use. For more apps, check the official [List of application](https://wiki.archlinux.org/index.php/List_of_applications) from the arch wiki.
 
 In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
@@ -35,3 +35,4 @@ In the list you'll find the name of the package that you need to install, and th
 ## Tools
 - [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) window management tool.
 - [moreutils](https://joeyh.name/code/moreutils/) collection of unix tools, I use it for `ifne` and `mispipe`.
+- [inotify-tools](https://github.com/inotify-tools/inotify-tools/wiki) for reacting to changes in the filesystem.

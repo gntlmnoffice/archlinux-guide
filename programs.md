@@ -4,6 +4,7 @@ List of the applications and tools I use. For more apps, check the official [Lis
 In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 
 ## Applications
+- [st](https://st.suckless.org/) terminal, suckless tool
 - [neovim](https://wiki.archlinux.org/index.php/Neovim), run it with `nvim`.
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd) for a key binder.
 - [arandr](https://wiki.archlinux.org/index.php/Multihead#Configuration_using_arandr) for GUI and [xorg-xrandr](https://wiki.archlinux.org/index.php/Xrandr) for terminal, run it with `xrandr`.
@@ -11,7 +12,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [firefox](https://wiki.archlinux.org/index.php/Firefox)
 - [code](https://wiki.archlinux.org/index.php/Visual_Studio_Code) for open source release of *Visual Studio Code*.
 - [git](https://wiki.archlinux.org/index.php/Git), also [openssh]() to connect without entering password.
-- [rofi](https://wiki.archlinux.org/index.php/Rofi) to quickly launch apps. Run `rofi-theme-selector` to select the theme.
+- [dmenu](https://tools.suckless.org/dmenu/) general purpose gui fuzzy finder, this is a suckless utility.
 - [sxiv](https://wiki.archlinux.org/index.php/Sxiv), image and gif viewer.
 - [maim](https://github.com/naelstrof/maim) to take screenshots.
 - [deepin-screen-recorder](https://www.deepin.org/en/original/deepin-screen-recorder/) to take gif screencasts.
@@ -33,6 +34,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [ranger](https://wiki.archlinux.org/index.php/Ranger) for a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.
 
 ## Tools
+- [fzf](https://github.com/junegunn/fzf) terminal fuzzy finder utility.
 - [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) window management tool.
 - [moreutils](https://joeyh.name/code/moreutils/) collection of unix tools, I use it for `ifne` and `mispipe`.
 - [inotify-tools](https://github.com/inotify-tools/inotify-tools/wiki) for reacting to changes in the filesystem.

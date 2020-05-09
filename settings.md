@@ -147,3 +147,35 @@ systemctl restart systemd-logind
   ```
   > **Note**: For some reason the cursor does not change for empty desktops
 
+### Set up fish
+
+#### Installation
+- Install fish from the official repo
+
+#### Set fish as default shell
+- Run `chsh -l` to list installed shells.
+- Run `chsh -s /usr/bin/fish` so set fish as the default shell.
+
+#### Set up command completion
+- Run `fish_update_completions` to generate autocompletions from man pages.
+
+#### Remove fish greeting
+- Run `set -U fish_greeting` once to disable the fish greeting.
+
+#### Enable vi mode
+- Run `fish_vi_key_bindings` to enable vi mode
+
+#### Fish config
+- The fish config file is located at `~/.config/fish/config.fish`.
+
+#### Start x from fish
+- Add the following to the end of your `~/.config/fish/config.fish`.
+```
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx -- -keeptty
+    end
+end
+```
+>**Note**: More info on fish could be found in the [archwiki](https://wiki.archlinux.org/index.php/Fish) and the [official site](https://fishshell.com/).

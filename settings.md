@@ -147,28 +147,28 @@ systemctl restart systemd-logind
   ```
   > **Note**: For some reason the cursor does not change for empty desktops
 
-### Set up fish
+## Set up fish
 
-#### Installation
+### Installation
 - Install fish from the official repo
 
-#### Set fish as default shell
+### Set fish as default shell
 - Run `chsh -l` to list installed shells.
 - Run `chsh -s /usr/bin/fish` so set fish as the default shell.
 
-#### Set up command completion
+### Set up command completion
 - Run `fish_update_completions` to generate autocompletions from man pages.
 
-#### Remove fish greeting
+### Remove fish greeting
 - Run `set -U fish_greeting` once to disable the fish greeting.
 
-#### Enable vi mode
+### Enable vi mode
 - Run `fish_vi_key_bindings` to enable vi mode
 
-#### Fish config
+### Fish config
 - The fish config file is located at `~/.config/fish/config.fish`.
 
-#### Start x from fish
+### Start x from fish
 - Add the following to the end of your `~/.config/fish/config.fish`.
 ```
 # Start X at login
@@ -179,3 +179,43 @@ if status is-login
 end
 ```
 >**Note**: More info on fish could be found in the [archwiki](https://wiki.archlinux.org/index.php/Fish) and the [official site](https://fishshell.com/).
+
+## Emojis
+- Install the fonts `ttf-joypixels` and `noto-fonts-emoji` from the official repo.
+- Add the following content to the file `~/.config/fontconfig/fonts.conf`:
+```xml
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+	<alias>
+		<family>serif</family>
+		<prefer>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans-serif</family>
+		<prefer>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>sans</family>
+		<prefer>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+		</prefer>
+	</alias>
+	<alias>
+		<family>monospace</family>
+		<prefer>
+			<family>Joy Pixels</family>
+			<family>Noto Color Emoji</family>
+		</prefer>
+	</alias>
+</fontconfig>
+```
+- Run `fc-cache -f -v`
+- Restart the application and you should have emojis working.

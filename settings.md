@@ -56,7 +56,7 @@ exec startx
 ## Enable hibernation
 - Run `lsblk` to find out the name of the SWAP partition.
 - Open the file `/etc/default/grub`, find the line that starts with `GRUB_CMDLINE_LINUX_DEFAULT="` and add `resume=/dev/sdX#"`to the sequence of space separated paramenter within the quotation marks.
-- Run the following command to generate the `grub.cfg` configuration file:  
+- Run the following command to generate the `grub.cfg` configuration file:
   ```
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   ```
@@ -75,14 +75,14 @@ exec startx
 - Install `rclone` from the archlinux repo.
 - Run `rclone config` to configure it. [Here](https://rclone.org/docs/) you can find documentation for the different services available. Documentation specific
  to Google Drive can be found [here](https://rclone.org/drive/).
-  > **Note**: In the case of Google Drive, for the `--drive-root-folder-id` you must specify the `id` of the folder, not the 
+  > **Note**: In the case of Google Drive, for the `--drive-root-folder-id` you must specify the `id` of the folder, not the
   path. The folder `id` can be found at the end of the url of the folder.
 - Add `rclone mount remote:path/to/files /path/to/local/mount &` to `~/.xinitrc`. More info on the `rclone mount` command can be found [here](https://rclone.org/commands/rclone_mount/).
 > **Note:**: More info on `rclone` can be found on the [rclone docs](https://rclone.org/docs/)
 
 ## Install list of words for spell checker
 - Install `words` from the official repo.
-  This adds some files to the folder `/usr/share/dict/`, each file contains a list of words in a given language. 
+  This adds some files to the folder `/usr/share/dict/`, each file contains a list of words in a given language.
   For words in english, use `/usr/share/dict/words`.
 
 ## Customize GRUB
@@ -96,14 +96,14 @@ exec startx
 # screen locker
 xset s on & # enable the screensaver
 xset s 600 & # launch screensaver after 10 mins of inactivity
-xss-lock slock & # start slock as a locker when the screensaver is triggered 
+xss-lock slock & # start slock as a locker when the screensaver is triggered
 slock & # run locker on start
 ```
 - Run `xset s activate` to manually trigger the screensaver that triggers the locker
 
 ## Set wallpaper as a solid color
 - Install `hsetroot` from the official repo.
-- Run `hsetroot -solid <color>`, for example in use `hsetroot -solid '#232729'`. 
+- Run `hsetroot -solid <color>`, for example in use `hsetroot -solid '#232729'`.
 - Add it to your `~/.xinitrc`.
 
 ## Disable action when lid closes
@@ -219,3 +219,13 @@ end
 ```
 - Run `fc-cache -f -v`
 - Restart the application and you should have emojis working.
+
+
+## Sort pacman mirrorlist
+
+- Install `reflector`
+- Run:
+  ```sh
+  # sorts the 200 mirrors most recently updated by speed
+  sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
+  ```

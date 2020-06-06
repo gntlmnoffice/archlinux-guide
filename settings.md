@@ -223,7 +223,7 @@ end
 
 ## Sort pacman mirrorlist
 
-- Install `reflector`
+- Install `reflector` from the official repo
 - Run:
   ```sh
   # sorts the 200 mirrors most recently updated by speed

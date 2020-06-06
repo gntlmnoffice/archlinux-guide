@@ -39,3 +39,4 @@ In the list you'll find the name of the package that you need to install, and th
 - [moreutils](https://joeyh.name/code/moreutils/) collection of unix tools, I use it for `ifne` and `mispipe`.
 - [inotify-tools](https://github.com/inotify-tools/inotify-tools/wiki) for reacting to changes in the filesystem.
 - [reflector](https://wiki.archlinux.org/index.php/Reflector) to update the pacman mirrorlist
+- [mlocate](https://wiki.archlinux.org/index.php/Mlocate) utility to locate files in the system, run with `locate` and `sudo updatedb` to update the database.

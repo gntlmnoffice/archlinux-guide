@@ -32,7 +32,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [plex-media-server](https://wiki.archlinux.org/index.php/Plex)<sup>AUR</sup> for *Plex*. See instructions to [setup](https://wiki.archlinux.org/index.php/Plex#Setup).
 - For *PIA* see instructions [here](https://wiki.archlinux.org/index.php/Private_Internet_Access#Official_installation_script).
 - [ranger](https://wiki.archlinux.org/index.php/Ranger) for a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.
-
+- [sdcv](https://wiki.archlinux.org/index.php/Sdcv) CLI dictionary. The dictionaries I use are in my Google Drive, they should be copied to `/usr/share/stardict/dic`
 ## Tools
 - [fzf](https://github.com/junegunn/fzf) terminal fuzzy finder utility.
 - [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) window management tool.

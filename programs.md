@@ -15,7 +15,6 @@ In the list you'll find the name of the package that you need to install, and th
 - [dmenu](https://tools.suckless.org/dmenu/) general purpose gui fuzzy finder, this is a suckless utility.
 - [sxiv](https://wiki.archlinux.org/index.php/Sxiv), image and gif viewer.
 - [maim](https://github.com/naelstrof/maim) to take screenshots.
-- [deepin-screen-recorder](https://www.deepin.org/en/original/deepin-screen-recorder/) to take gif screencasts.
 - `gpick` for a color picker.
 - `file-roller` for an archive manager with GUI.
 - [zathura](https://wiki.archlinux.org/index.php/Zathura) and `zathura-pdf-poppler` for a PDF reader.

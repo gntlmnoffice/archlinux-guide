@@ -229,3 +229,9 @@ end
   # sorts the 200 mirrors most recently updated by speed
   sudo reflector --latest 200 --sort rate --save /etc/pacman.d/mirrorlist
   ```
+## Wacom tablet
+
+- Install `xf86-input-wacom` from the official repo
+- Run `xsetwacom set 'Wacom Intuos PT S Pen stylus' MapToOutput <Output-Name>` 
+  - get the `<output-name>` by runing `xrandr`, e.g. `DP-2`
+>**Note:** More on how to set up dual monitors [here](https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up) and general info on the [archwiki](https://wiki.archlinux.org/index.php/wacom_tablet)

@@ -235,3 +235,8 @@ end
 - Run `xsetwacom set 'Wacom Intuos PT S Pen stylus' MapToOutput <Output-Name>` 
   - get the `<output-name>` by runing `xrandr`, e.g. `DP-2`
 >**Note:** More on how to set up dual monitors [here](https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up) and general info on the [archwiki](https://wiki.archlinux.org/index.php/wacom_tablet)
+
+## Screen brightness
+- Install `xorg-xbacklight`, (actually this did not worked for me and I had to install `acpilight` instead, but the following steps are the same, [this is documented on the archiwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property))
+- Run `sudo xbacklight -set <value>` to set the backlight to a given value, or `sudo xbacklight -inc <value>` and `sudo xbacklight -dec <value>` to increase or decrease the backligth.
+>**Note:** More on the [archwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property)

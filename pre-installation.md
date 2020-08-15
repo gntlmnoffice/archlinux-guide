@@ -1,6 +1,7 @@
 # Pre installation
 Steps to follow before starting the install.
 
+**Table of Contents**
 - [Download the iso](#download-the-iso)
 - [Prepare flash installation media](#prepare-flash-installation-media)
 - [Partition Windows drive if needed](#partition-windows-drive-if-needed)

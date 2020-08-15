@@ -1,6 +1,7 @@
 # Post installation
 Some post installation steps to get the setup to a functional state.
 
+**Table of Contents**
 - [Connect to wifi](#connect-to-wifi)
   - [Using NetworkManager](#using-networkmanager)
   - [Using wifi-menu with netctl](#using-wifi-menu-with-netctl)

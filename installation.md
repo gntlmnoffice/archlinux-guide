@@ -1,6 +1,7 @@
 # Installation
 My personal guide to install *archlinux*.
 
+**Table of Contents**
 - [Boot from the flash installation media](#boot-from-the-flash-installation-media)
 - [Verify the boot mode](#verify-the-boot-mode)
 - [Connect to the internet](#connect-to-the-internet)

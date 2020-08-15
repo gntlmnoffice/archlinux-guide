@@ -31,7 +31,7 @@ Different settings to configure *archlinux* to my liking.
   - [Sort pacman mirrorlist](#sort-pacman-mirrorlist)
   - [Wacom tablet](#wacom-tablet)
   - [Screen brightness](#screen-brightness)
-  - [Run npm commnads without sudo](#run-npm-commnads-without-sudo)
+  - [Run npm commands without sudo](#run-npm-commands-without-sudo)
 
 ## Install the LTS kernel
 - Run `uname -r` to check the version of of the kernel, if there is no `lts` in the name it's not and LTS version.
@@ -273,7 +273,7 @@ end
 - Run `sudo xbacklight -set <value>` to set the backlight to a given value, or `sudo xbacklight -inc <value>` and `sudo xbacklight -dec <value>` to increase or decrease the backligth.
 >**Note:** More on the [archwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property)
 
-## Run npm commnads without sudo
+## Run npm commands without sudo
 - Install `npm` from the official repo
 - Run `npm config set prefix ~/.npm` to change the location of the installation files to `~/.npm`, you could use any other directory inside home
 - Add `~/.npm/bin` to your path to be able to run commands

@@ -240,3 +240,9 @@ end
 - Install `xorg-xbacklight`, (actually this did not worked for me and I had to install `acpilight` instead, but the following steps are the same, [this is documented on the archiwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property))
 - Run `sudo xbacklight -set <value>` to set the backlight to a given value, or `sudo xbacklight -inc <value>` and `sudo xbacklight -dec <value>` to increase or decrease the backligth.
 >**Note:** More on the [archwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property)
+
+## Run npm commnads without sudo
+- Install `npm` from the official repo
+- Run `npm config set prefix ~/.npm` to change the location of the installation files to `~/.npm`, you could use any other directory inside home
+- Add `~/.npm/bin` to your path to be able to run commands
+>**Note:** More [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92)

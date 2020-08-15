@@ -1,13 +1,12 @@
 # Post installation
 Some post installation steps to get the setup to a functional state.
 
-- [Post installation](#post-installation)
-  - [Connect to wifi](#connect-to-wifi)
-    - [Using NetworkManager](#using-networkmanager)
-    - [Using wifi-menu with netctl](#using-wifi-menu-with-netctl)
-  - [Add user](#add-user)
-  - [Install X](#install-x)
-  - [Install main packages](#install-main-packages)
+- [Connect to wifi](#connect-to-wifi)
+  - [Using NetworkManager](#using-networkmanager)
+  - [Using wifi-menu with netctl](#using-wifi-menu-with-netctl)
+- [Add user](#add-user)
+- [Install X](#install-x)
+- [Install main packages](#install-main-packages)
 
 ## Connect to wifi
 

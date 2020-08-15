@@ -2,16 +2,16 @@
 Some post installation steps to get the setup to a functional state.
 
 **Table of Contents**
-- [Connect to wifi](#connect-to-wifi)
-  - [Using NetworkManager](#using-networkmanager)
-  - [Using wifi-menu with netctl](#using-wifi-menu-with-netctl)
-- [Add user](#add-user)
-- [Install X](#install-x)
-- [Install main packages](#install-main-packages)
+- [1. Connect to wifi](#1-connect-to-wifi)
+  - [1.1. Using NetworkManager](#11-using-networkmanager)
+  - [1.2. Using wifi-menu with netctl](#12-using-wifi-menu-with-netctl)
+- [2. Add user](#2-add-user)
+- [3. Install X](#3-install-x)
+- [4. Install main packages](#4-install-main-packages)
 
-## Connect to wifi
+## 1. Connect to wifi
 
-### Using NetworkManager
+### 1.1. Using NetworkManager
 - Start NetworkManager:
   ```
   sudo systemctl start NetworkManager.service
@@ -30,11 +30,11 @@ Some post installation steps to get the setup to a functional state.
   ```
 - Use `nmtui` for a TUI similar to `wifi-menu` or `nm-connection-editor` for a GUI.
 
-### Using wifi-menu with netctl
+### 1.2. Using wifi-menu with netctl
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
-## Add user
+## 2. Add user
 - Run `useradd -m -g group_name user_name` to add a user.
   Example:
   ```
@@ -49,7 +49,7 @@ Some post installation steps to get the setup to a functional state.
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
 
-## Install X
+## 3. Install X
 - Run `sudo pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```
@@ -65,7 +65,7 @@ Some post installation steps to get the setup to a functional state.
   ```
 >Note: The last step is not needed if we use *GDM* and start it with ` sudo systemctl enable gdm.service`.
 
-## Install main packages
+## 4. Install main packages
 - Install **yay**:
   ```
   sudo pacman -Syu git

@@ -4,10 +4,10 @@ List of the applications and tools I use. For more apps, check the official [Lis
 In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 
 **Table of Contents**
-- [Applications](#applications)
-- [Tools](#tools)
+- [1. Applications](#1-applications)
+- [2. Tools](#2-tools)
 
-## Applications
+## 1. Applications
 - [st](https://st.suckless.org/) terminal, suckless tool
 - [neovim](https://wiki.archlinux.org/index.php/Neovim), run it with `nvim`.
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd) for a key binder.
@@ -36,7 +36,7 @@ In the list you'll find the name of the package that you need to install, and th
 - For *PIA* see instructions [here](https://wiki.archlinux.org/index.php/Private_Internet_Access#Official_installation_script).
 - [ranger](https://wiki.archlinux.org/index.php/Ranger) for a file manager, install `w3m` and add the line `set preview_images true` to the config file to show images, it works with *Alacritty*.
 - [sdcv](https://wiki.archlinux.org/index.php/Sdcv) CLI dictionary. The dictionaries I use are in my Google Drive, they should be copied to `/usr/share/stardict/dic`
-## Tools
+## 2. Tools
 - [fzf](https://github.com/junegunn/fzf) terminal fuzzy finder utility.
 - [xdotool](https://jlk.fjfi.cvut.cz/arch/manpages/man/xdotool.1) window management tool.
 - [moreutils](https://joeyh.name/code/moreutils/) collection of unix tools, I use it for `ifne` and `mispipe`.

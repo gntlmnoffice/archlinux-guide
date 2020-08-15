@@ -1,6 +1,25 @@
 # Installation
 My personal guide to install *archlinux*.
 
+- [Installation](#installation)
+  - [Boot from the flash installation media](#boot-from-the-flash-installation-media)
+  - [Verify the boot mode](#verify-the-boot-mode)
+  - [Connect to the internet](#connect-to-the-internet)
+  - [Update the system clock](#update-the-system-clock)
+  - [Partition the disks](#partition-the-disks)
+  - [Format partitions](#format-partitions)
+  - [Initialize swap partition](#initialize-swap-partition)
+  - [Mount the partitions](#mount-the-partitions)
+  - [Install Arch Linux and all the main packages](#install-arch-linux-and-all-the-main-packages)
+  - [Set up fstab](#set-up-fstab)
+  - [Change root into the new system](#change-root-into-the-new-system)
+  - [Set up time zone](#set-up-time-zone)
+  - [Set up localization](#set-up-localization)
+  - [Set up root password](#set-up-root-password)
+  - [Set up network (wireless)](#set-up-network-wireless)
+  - [Set up GRUB](#set-up-grub)
+  - [Reboot](#reboot)
+
 ## Boot from the flash installation media
 Plug the flash installation media and boot the computer from it.
 
@@ -8,7 +27,7 @@ Plug the flash installation media and boot the computer from it.
 - Run `ls /sys/firmware/efi/efivars`. If the directory does not exist, the system may be booted in *BIOS* or *CSM* mode.
 
 ## Connect to the internet
-- Run `wifi-menu` to set up the wifi. 
+- Run `wifi-menu` to set up the wifi.
 - Run `ping google.com` to test the conection.
 
 ## Update the system clock
@@ -18,13 +37,13 @@ Plug the flash installation media and boot the computer from it.
 ## Partition the disks
 - Run `lsblk` to list the devices.
 - Run `gdisk /dev/sdX` to partition the disk.
-- *EFI*: 
+- *EFI*:
   - *size*: `260–512 MB` (example: `+260m`)
   - *type:* `EFI System`, it may be shared with Windows.
-- *swap*: 
-  - *size*: `R + sqrt(R)`, where `R` is the size of the RAM 
+- *swap*:
+  - *size*: `R + sqrt(R)`, where `R` is the size of the RAM
   - *type:* `Linux swap`. Run the command `free` to get the size of the RAM
-- *root*: 
+- *root*:
   - *size*: `23G - 32G`
   - *type:* `Linux x86-64 root (/)`.
 - *home*:
@@ -39,23 +58,23 @@ Plug the flash installation media and boot the computer from it.
   mkfs.ext4 /dev/sdX#
   ```
 - Run `mkfs.fat -F32 /dev/sdX#` to format the *EFI* partition
-  
+
 ## Initialize swap partition
 - To initialize the *swap* partition, run:
   ```
   mkswap /dev/sdX#
   swapon /dev/sdX#
   ```
-  
+
 ## Mount the partitions
 - Using the `mount` command, mount the *root* partition to `/mnt`.`
-  Example: 
+  Example:
   ```
   mount /dev/sdX# /mnt
   ```
 - Run: `mkdir /mnt/boot /mnt/home` to create the mounting points for the *EFI* and *home* partitions.
 - Using the `mount` command, mount the *EFI* and *home* partitions to `/mnt/home` and `/mnt/boot` respectively.
-  
+
 ## Install Arch Linux and all the main packages
 - Run `pacstrap /mnt base linux linux-firmware base-devel`
 

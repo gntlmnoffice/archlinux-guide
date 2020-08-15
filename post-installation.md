@@ -1,6 +1,14 @@
 # Post installation
 Some post installation steps to get the setup to a functional state.
 
+- [Post installation](#post-installation)
+  - [Connect to wifi](#connect-to-wifi)
+    - [Using NetworkManager](#using-networkmanager)
+    - [Using wifi-menu with netctl](#using-wifi-menu-with-netctl)
+  - [Add user](#add-user)
+  - [Install X](#install-x)
+  - [Install main packages](#install-main-packages)
+
 ## Connect to wifi
 
 ### Using NetworkManager
@@ -21,7 +29,7 @@ Some post installation steps to get the setup to a functional state.
   nmcli device wifi connect SSID password password
   ```
 - Use `nmtui` for a TUI similar to `wifi-menu` or `nm-connection-editor` for a GUI.
-  
+
 ### Using wifi-menu with netctl
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.

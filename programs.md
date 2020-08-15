@@ -3,6 +3,10 @@ List of the applications and tools I use. For more apps, check the official [Lis
 
 In the list you'll find the name of the package that you need to install, and the command you need to run to start the application if different from the name of the package. If the package is only available from the AUR it will be specified.
 
+- [Programs](#programs)
+  - [Applications](#applications)
+  - [Tools](#tools)
+
 ## Applications
 - [st](https://st.suckless.org/) terminal, suckless tool
 - [neovim](https://wiki.archlinux.org/index.php/Neovim), run it with `nvim`.

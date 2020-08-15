@@ -1,6 +1,15 @@
 # Pre installation
 Steps to follow before starting the install.
 
+- [Pre installation](#pre-installation)
+  - [Download the iso](#download-the-iso)
+  - [Prepare flash installation media](#prepare-flash-installation-media)
+  - [Partition Windows drive if needed](#partition-windows-drive-if-needed)
+  - [Disable fast start-up on Windows](#disable-fast-start-up-on-windows)
+  - [Disable hibernation in Windows](#disable-hibernation-in-windows)
+  - [Bitlocker](#bitlocker)
+  - [Disable secure boot](#disable-secure-boot)
+
 ## Download the iso
 Download the arch linux iso image [here](https://www.archlinux.org/download/). You could use transmission to download from a torrent or use a direct download. The iso size is 635.0 MB.
 

@@ -19,6 +19,7 @@ In the list you'll find the name of the package that you need to install, and th
 - [dmenu](https://tools.suckless.org/dmenu/) general purpose gui fuzzy finder, this is a suckless utility.
 - [sxiv](https://wiki.archlinux.org/index.php/Sxiv), image and gif viewer.
 - [maim](https://github.com/naelstrof/maim) to take screenshots.
+- [flameshot](https://github.com/lupoDharkael/flameshot) to take screenshots with annotations. You run it with `flameshot gui`, and you configure it with `flameshot config`, you need to add `flameshot &` to `~/.xinitrc`.
 - `gpick` for a color picker.
 - `file-roller` for an archive manager with GUI.
 - [zathura](https://wiki.archlinux.org/index.php/Zathura) and `zathura-pdf-poppler` for a PDF reader.

@@ -10,6 +10,7 @@ In the list you'll find the name of the package that you need to install, and th
 ## 1. Applications
 - [st](https://st.suckless.org/) terminal, suckless tool
 - [neovim](https://wiki.archlinux.org/index.php/Neovim), run it with `nvim`.
+- [vim-plug](https://github.com/junegunn/vim-plug)<sup>AUR</sup>, plugin manager for vim.
 - [sxhkd](https://wiki.archlinux.org/index.php/Sxhkd) for a key binder.
 - [arandr](https://wiki.archlinux.org/index.php/Multihead#Configuration_using_arandr) for GUI and [xorg-xrandr](https://wiki.archlinux.org/index.php/Xrandr) for terminal, run it with `xrandr`.
 - [google-chrome](https://wiki.archlinux.org/index.php/Chromium) <sup>AUR</sup>

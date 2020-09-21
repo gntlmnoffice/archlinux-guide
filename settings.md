@@ -32,6 +32,7 @@ Different settings to configure *archlinux* to my liking.
 - [20. Wacom tablet](#20-wacom-tablet)
 - [21. Screen brightness](#21-screen-brightness)
 - [22. Run npm commands without sudo](#22-run-npm-commands-without-sudo)
+- [23. XDG user directories](#23-xdg-user-directories)
 
 ## 1. Install the LTS kernel
 - Run `uname -r` to check the version of of the kernel, if there is no `lts` in the name it's not and LTS version.
@@ -278,3 +279,9 @@ end
 - Run `npm config set prefix ~/.npm` to change the location of the installation files to `~/.npm`, you could use any other directory inside home
 - Add `~/.npm/bin` to your path to be able to run commands
 >**Note:** More [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92)
+
+## 23. XDG user directories
+The following steps allow you to set the location of directories like *Downloads*, *Desktop*, etc.
+
+- Install `xdg-user-dirs` from the official repo.
+- Run `xdg-user-dirs-update`, this will generate the file `~/.config/user-dirs.dirs` if it doesn't exist and it will update the user directories from that file.

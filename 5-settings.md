@@ -43,14 +43,14 @@ Different settings to configure *archlinux* to my liking.
 
 ## 2. Enable numlock on start
 - Run:
-```
- sudo pacman -Syu numlockx
-```
+  ```
+  sudo pacman -Syu numlockx
+  ```
 - Add it to `~/.xinitrc` file before `exec`:
   ```
   numlockx &
   ```
->**Note**: More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)
+[More [here](https://wiki.archlinux.org/index.php/Activating_numlock_on_bootup#startx)]
 
 ## 3. Automount drives
 - Run:
@@ -70,7 +70,7 @@ Different settings to configure *archlinux* to my liking.
 - Run `systemctl enable --now systemd-timesyncd.service` to start the service now and on boot.
 - Run `timedatectl` to check the status, it takes a few seconds too load.
 
->**Note**: More [here](https://wiki.archlinux.org/index.php/Systemd-timesyncd)
+[More [here](https://wiki.archlinux.org/index.php/Systemd-timesyncd)]
 
 ## 6. Enable auto login in tty
 - Create the file `/etc/systemd/system/getty@tty1.service.d/override.conf` and add the following content:
@@ -102,7 +102,8 @@ exec startx
   sudo mkinitcpio -p linux
   ```
 - Run: `sudo systemctl hibernate` to hibernate.
->**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation).
+
+[More [here](https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Hibernation)]
 
 ## 9. Set up rclone to sync files with cloud
 - Install `rclone` from the archlinux repo.
@@ -110,8 +111,11 @@ exec startx
  to Google Drive can be found [here](https://rclone.org/drive/).
   > **Note**: In the case of Google Drive, for the `--drive-root-folder-id` you must specify the `id` of the folder, not the
   path. The folder `id` can be found at the end of the url of the folder.
-- Add `rclone mount remote:path/to/files /path/to/local/mount &` to `~/.xinitrc`. More info on the `rclone mount` command can be found [here](https://rclone.org/commands/rclone_mount/).
-> **Note:**: More info on `rclone` can be found on the [rclone docs](https://rclone.org/docs/)
+- Add `rclone mount remote:path/to/files /path/to/local/mount &` to `~/.xinitrc`.
+
+  [More on `rclone mount` [here](https://rclone.org/commands/rclone_mount/)]
+
+**Note**: More info on `rclone` can be found on the [rclone docs](https://rclone.org/docs/)
 
 ## 10. Install list of words for spell checker
 - Install `words` from the official repo.
@@ -148,7 +152,7 @@ HandleLidSwitch=ignore
 ```
 systemctl restart systemd-logind
 ```
->**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd)
+**Note**: More [here](https://wiki.archlinux.org/index.php/Power_management#Power_management_with_systemd)
 
 ## 15. Fix screen tearing
 - Use [this video](https://www.youtube.com/watch?v=MfL_JkcEFbE) to determine if the screen is tearing.
@@ -167,7 +171,7 @@ systemctl restart systemd-logind
   - For *Qt 4* see instructions [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle) (I haven't done this step because I haven't needed it)
   > **Note**: Make sure your GTK theme is compatible with GTK 2 for this method to work
 
-  > **Note**: More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)
+  [More [here](https://wiki.archlinux.org/index.php/Uniform_look_for_Qt_and_GTK_applications#QGtkStyle)]
 
 ### 16.1. Change gtk theme on the fly
 - Make sure `xfce4-settings` is installed.
@@ -211,7 +215,7 @@ if status is-login
     end
 end
 ```
->**Note**: More info on fish could be found in the [archwiki](https://wiki.archlinux.org/index.php/Fish) and the [official site](https://fishshell.com/).
+[More on fish on the [archwiki](https://wiki.archlinux.org/index.php/Fish) and the [official site](https://fishshell.com/)]
 
 ## 18. Emojis
 - Install the fonts `ttf-joypixels` and `noto-fonts-emoji` from the official repo.
@@ -267,18 +271,21 @@ end
 - Install `xf86-input-wacom` from the official repo
 - Run `xsetwacom set 'Wacom Intuos PT S Pen stylus' MapToOutput <Output-Name>`
   - get the `<output-name>` by runing `xrandr`, e.g. `DP-2`
->**Note:** More on how to set up dual monitors [here](https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up) and general info on the [archwiki](https://wiki.archlinux.org/index.php/wacom_tablet)
+
+[More on how to set up dual monitors [here](https://github.com/linuxwacom/xf86-input-wacom/wiki/Dual-and-Multi-Monitor-Set-Up) and general info [here](https://wiki.archlinux.org/index.php/wacom_tablet)]
 
 ## 21. Screen brightness
 - Install `xorg-xbacklight`, (actually this did not worked for me and I had to install `acpilight` instead, but the following steps are the same, [this is documented on the archiwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property))
 - Run `sudo xbacklight -set <value>` to set the backlight to a given value, or `sudo xbacklight -inc <value>` and `sudo xbacklight -dec <value>` to increase or decrease the backligth.
->**Note:** More on the [archwiki](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property)
+
+[More [here](https://wiki.archlinux.org/index.php/Backlight#xbacklight_returns_:_No_outputs_have_backlight_property)]
 
 ## 22. Run npm commands without sudo
 - Install `npm` from the official repo
 - Run `npm config set prefix ~/.npm` to change the location of the installation files to `~/.npm`, you could use any other directory inside home
 - Add `~/.npm/bin` to your path to be able to run commands
->**Note:** More [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92)
+
+[More [here](https://medium.com/@ExplosionPills/dont-use-sudo-with-npm-still-66e609f5f92)]
 
 ## 23. XDG user directories
 The following steps allow you to set the location of directories like *Downloads*, *Desktop*, etc.

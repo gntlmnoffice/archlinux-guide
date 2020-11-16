@@ -14,14 +14,14 @@ Steps to follow before starting the install.
 Download the arch linux iso image [here](https://www.archlinux.org/download/). You could use transmission to download from a torrent or use a direct download. The iso size is 635.0 MB.
 
 ## 2. Prepare flash installation media
->Note: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_automatic_tools).
+>**Note**: There are alternative methods to prepare the flash installation media, you could read about them [here](https://wiki.archlinux.org/index.php/USB_flash_installation_media#Using_automatic_tools).
 
 - Find out the name of your USB drive with `lsblk`.
 - Run the following command, replacing `/dev/sdX` with your drive, e.g. `/dev/sde`. (Do not append a partition number, so do **not** use something like `/dev/sdb1`)
 ```
 sudo dd bs=4M if=path/to/archlinux.iso of=/dev/sdX status=progress oflag=sync
 ```
->Tip: If the USB's Arch ISO hangs or is unable to load, try repeating the dd media creation process on the same USB drive one or more times.
+>**Tip**: If the USB's Arch ISO hangs or is unable to load, try repeating the dd media creation process on the same USB drive one or more times.
 
 ## 3. Partition Windows drive if needed
 Follow the instructions described [here](https://www.howtogeek.com/101862/how-to-manage-partitions-on-windows-without-downloading-any-other-software/)

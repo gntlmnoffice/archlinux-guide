@@ -27,7 +27,13 @@ Plug the flash installation media and boot the computer from it.
 - Run `ls /sys/firmware/efi/efivars`. If the directory does not exist, the system may be booted in *BIOS* or *CSM* mode.
 
 ## 3. Connect to the internet
-- Run `wifi-menu` to set up the wifi.
+- Ethernet—plug in the cable.
+- Wi-Fi—authenticate to the wireless network using [iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl).
+  - Run `iwctl`
+  - Run `device list` to list all wireless devices, make note of the *device name*, e.g. `wlan0`
+  - Run `station <device-name> get-networks`, make note of the *network name*, e.g. `Sandy & Dia or Sadia for short`
+  - Run `station <device-name> connect <network-name>` and enter the passphrase (AKA password)
+  - Run `exit` to exit iwctl
 - Run `ping google.com` to test the conection.
 
 ## 4. Update the system clock

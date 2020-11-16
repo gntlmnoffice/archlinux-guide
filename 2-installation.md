@@ -45,10 +45,11 @@ to easily copy the commands, etc. This step of course is completely optional.
 On the remote machine (the one we want to install archlinux on):
   - Run `passwd` to set up the password.
   - Open the file `/etc/ssh/sshd_config` and check that `PermitRootLogin` yes is present (and uncommented).
-  - Run `systemctl start sshd.service`
+  - Run `systemctl start sshd.service`.
+  - Run `ifconfig -a` to get the ip address of the machine.
 
 On the local machine:
-  - ssh `root@<ip-of-the-target>` and enter the password
+  - ssh `root@<ip-address-of-the-machine>` and enter `yes` and then the password
 
 [More [here](https://wiki.archlinux.org/index.php/Install_Arch_Linux_via_SSH)]
 

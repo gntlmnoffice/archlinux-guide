@@ -27,12 +27,13 @@ Some post installation steps to get the setup to a functional state.
   ```
 - Connect to a wifi network:
   ```
-  nmcli device wifi connect SSID password password
+  nmcli device wifi connect <network-name> password <password>
   ```
 - Use `nmtui` for a TUI similar to `wifi-menu` or `nm-connection-editor` for a GUI.
 
 ### 1.2. Using wifi-menu with netctl
-- Run `wifi-menu` and create a profile. Name it something memorable like **home**
+- Run `wifi-menu` and create a profile. Name it something memorable like **home**, profiles are stored
+  as files on `/etc/netctl`, you can simply edit or remove them if you need to.
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
 ## 2. Connect via ssh (optional)

@@ -55,21 +55,28 @@ On the local machine:
 
 ## 5. Update the system clock
 - Run `timedatectl set-ntp true` to ensure the system clock is accurate.
-- Run `timedatectl` to check the service status.
+- Run `timedatectl` and check that `NTP service: active`
 
 ## 6. Partition the disks
 - Run `lsblk` to list the devices.
 - Run `gdisk /dev/sdX` to partition the disk.
-- *EFI*:
-  - *size*: `260–512 MB` (example: `+260m`)
+- *EFI* (seems to be required for UEFI):
+  A separate /boot partition is only required if your boot loader is not capable of
+  accessing the `/boot` directory that resides in `/`. This is not needed with *GRUB*.
+  - *size*: `260–512 MB` (example: `+300m`)
   - *type:* `EFI System`, it may be shared with Windows.
-- *swap*:
+- *swap* (optional):
+  I prefer swap files. Swap files and swap partitions are equally performant, but swap files are much easier to resize as needed
   - *size*: `R + sqrt(R)`, where `R` is the size of the RAM
   - *type:* `Linux swap`. Run the command `free` to get the size of the RAM
 - *root*:
-  - *size*: `23G - 32G`
+  This is the required partition.
+  - *size*: at least `32G`
   - *type:* `Linux x86-64 root (/)`.
-- *home*:
+- *home* (optional):
+  It may be convenient to have your home on a different partition, but I don't really get any
+  advantage with my setup and is a pain having to guess how much will I end needing for root and home.
+  So I usually go with just one root partition.
   - *size*: Use the remaining space.
   - *type:* `Linux filesystem`.
 
@@ -83,6 +90,8 @@ On the local machine:
 - Run `mkfs.fat -F32 /dev/sdX#` to format the *EFI* partition
 
 ## 8. Initialize swap partition
+>  **Note**: This is step is only needed if you created swap partition.
+
 - To initialize the *swap* partition, run:
   ```
   mkswap /dev/sdX#
@@ -96,7 +105,8 @@ On the local machine:
   mount /dev/sdX# /mnt
   ```
 - Run: `mkdir /mnt/boot /mnt/home` to create the mounting points for the *EFI* and *home* partitions.
-- Using the `mount` command, mount the *EFI* and *home* partitions to `/mnt/home` and `/mnt/boot` respectively.
+  Don't include `/mnt/home` if you didn't create a home partition.
+- Using the `mount` command, mount the *EFI* partition to `/mnt/boot` and the *home* partition to `/mnt/home` (if created).
 
 ## 10. Install Arch Linux and all the main packages
 - Run `pacstrap /mnt base linux linux-firmware base-devel`

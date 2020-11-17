@@ -36,7 +36,9 @@ Some post installation steps to get the setup to a functional state.
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
 ## 4. Connect via ssh (optional)
-Follow [these](./5-settings.md#1-setup-ssh-connection) instructions to set up a ssh connection
+It may be convenient at this point to complete the process remotely via ssh.
+
+See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) for instructions on this.
 
 ## 2. Add user
 - Run `useradd -m -g group_name user_name` to add a user.

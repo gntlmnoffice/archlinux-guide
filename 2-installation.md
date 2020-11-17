@@ -50,7 +50,7 @@ On the remote machine (the one we want to install archlinux on):
   - Run `passwd` to set up the password.
   - Open the file `/etc/ssh/sshd_config` and check that `PermitRootLogin yes` is present (and uncommented).
   - Run `systemctl start sshd.service`.
-  - Run `ifconfig -a` to get the ip address of the machine (usually has the following format `10.0.0.<something>`).
+  - Run `ip address` to get the ip address of the machine (usually has the following format `10.0.0.<something>`).
 
 On the local machine:
   - ssh `root@<ip-address-of-the-machine>` and enter `yes` and then the password

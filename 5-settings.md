@@ -36,6 +36,21 @@ Different settings to configure *archlinux* to my liking.
 - [24. XDG user directories](#24-xdg-user-directories)
 
 ## 1. Setup ssh connection
+On both the remote and local machines:
+  - Run `pacman -Syu openssh` to install *openssh*.
+On the remote machine:
+  - Open the file `/etc/ssh/sshd_config`:
+    - To allow access to the `root` user make user that `PermitRootLogin yes` is present (and uncommented).
+    - To allow access to some users add the line `AllowUsers user1 user2`.
+  - Run `ssh-keygen -A` to generate new host key pairs.
+  - Run `sshd -t` to ensure there are no errors. Valid configurations produce no output.
+  - Run `systemctl start sshd.service`.
+  - Run `ip address` to get the ip address of the machine (usually has the following format `10.0.0.<something>`).
+
+On the local machine:
+  - ssh `root@<ip-address-of-the-machine>` and enter `yes` and then the password
+
+[More [here](https://wiki.archlinux.org/index.php/OpenSSH)]
 
 
 ## 2. Install the LTS kernel

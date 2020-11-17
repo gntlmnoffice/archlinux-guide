@@ -65,10 +65,8 @@ On the local machine:
 - Run `lsblk` to list the devices.
 - Run `gdisk /dev/sdX` to partition the disk.
 - *EFI* (seems to be required for UEFI):
-  A separate /boot partition is only required if your boot loader is not capable of
-  accessing the `/boot` directory that resides in `/`. This is not needed with *GRUB*.
   - *size*: `260–512 MB` (example: `+300m`)
-  - *type:* `EFI System`, it may be shared with Windows.
+  - *type:* `EFI System partition`, it may be shared with Windows.
 - *swap* (optional):
   I prefer swap files. Swap files and swap partitions are equally performant, but swap files are much easier to resize as needed
   - *size*: `R + sqrt(R)`, where `R` is the size of the RAM
@@ -79,7 +77,7 @@ On the local machine:
   - *type:* `Linux x86-64 root (/)`.
 - *home* (optional):
   It may be convenient to have your home on a different partition, but I don't really get any
-  advantage with my setup and is a pain having to guess how much will I end needing for root and home.
+  advantage with my setup and is a pain having to guess how much will I end up needing for *root* and *home*.
   So I usually go with just one root partition.
   - *size*: Use the remaining space.
   - *type:* `Linux filesystem`.
@@ -103,7 +101,7 @@ On the local machine:
   ```
 
 ## 9. Mount the partitions
-- Using the `mount` command, mount the *root* partition to `/mnt`.`
+- Using the `mount` command, mount the *root* partition to `/mnt`.
   Example:
   ```
   mount /dev/sdX# /mnt
@@ -144,13 +142,13 @@ On the local machine:
 
 - Create the file `/etc/hostname`, and add the line:
   ```
-  your-computer-name
+  <your-computer-name>
   ```
 - Edit the file `/etc/hosts`, and add the lines:
   ```
   127.0.0.1	localhost
   ::1 localhost
-  127.0.1.1	your-computer-name.localdomain	your-computer-name
+  127.0.1.1	<your-computer-name>.localdomain	<your-computer-name>
   ```
 
 ## 17. Set up GRUB

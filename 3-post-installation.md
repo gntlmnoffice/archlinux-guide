@@ -5,10 +5,10 @@ Some post installation steps to get the setup to a functional state.
 - [1. Connect to wifi](#1-connect-to-wifi)
   - [1.1. Using NetworkManager](#11-using-networkmanager)
   - [1.2. Using wifi-menu with netctl](#12-using-wifi-menu-with-netctl)
-- [4. Connect via ssh (optional)](#4-connect-via-ssh-optional)
-- [2. Add user](#2-add-user)
-- [3. Install X](#3-install-x)
-- [4. Install main packages](#4-install-main-packages)
+- [2. Connect via ssh (optional)](#2-connect-via-ssh-optional)
+- [3. Add user](#3-add-user)
+- [4. Install X](#4-install-x)
+- [5. Install main packages](#5-install-main-packages)
 
 ## 1. Connect to wifi
 
@@ -35,12 +35,12 @@ Some post installation steps to get the setup to a functional state.
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
 
-## 4. Connect via ssh (optional)
+## 2. Connect via ssh (optional)
 It may be convenient at this point to complete the process remotely via ssh.
 
 See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) for instructions on this.
 
-## 2. Add user
+## 3. Add user
 - Run `useradd -m -g group_name user_name` to add a user.
   Example:
   ```
@@ -55,7 +55,7 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
 - Run `logout` to log out from root.
 - Enter your credentials to log as the newly created user
 
-## 3. Install X
+## 4. Install X
 - Run `sudo pacman -Syu xorg-server xorg-xinit xorg-xrandr xorg-xsetroot` to install xorg
 - Create the file `/etc/X11/Xwrapper.config` and add the following content to allow xinit to run from non-root users:
   ```
@@ -71,7 +71,7 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
   ```
 >Note: The last step is not needed if we use *GDM* and start it with ` sudo systemctl enable gdm.service`.
 
-## 4. Install main packages
+## 5. Install main packages
 - Install **yay**:
   ```
   sudo pacman -Syu git

@@ -30,12 +30,16 @@ Plug the flash installation media and boot the computer from it.
 ## 3. Connect to the internet
 - Ethernet—plug in the cable.
 - Wi-Fi—authenticate to the wireless network using [iwctl](https://wiki.archlinux.org/index.php/Iwd#iwctl).
-  - Run `iwctl`.
+  - Run `iwctl`, to enter the interactive prompt, keep in mind it auto-completes :)
   - Run `device list` to list all wireless devices, make note of the *device name*, e.g. `wlan0`.
-  - Run `station <device-name> get-networks`, make note of the *network name*, e.g. `Sandy & Dia or Sadia for short`.
-  - Run `station <device-name> connect <network-name>` and enter the passphrase (AKA password).
+  - Run `station <device-name> get-networks`, make note of the *network name*, e.g. `Sandy's wifi`.
+  - Run `station <device-name> connect <network-name>` (it auto-completes the *network* and *device names*) and enter the passphrase (AKA password).
   - Run `exit` to exit iwctl.
-- Run `ping google.com` to test the conection.
+- Run `ping google.com` to test the connection.
+
+> **Note**: This gave me an issue where I was able to connect but then `ping google.com` was not working.
+> If you get this, check with `device <device-name> show` to see if it says it's connected and run
+> `known-networks <network-name> forget` to forget the network and try again.
 
 ## 4. Connect via ssh (optional)
 
@@ -44,9 +48,9 @@ to easily copy the commands, etc. This step of course is completely optional.
 
 On the remote machine (the one we want to install archlinux on):
   - Run `passwd` to set up the password.
-  - Open the file `/etc/ssh/sshd_config` and check that `PermitRootLogin` yes is present (and uncommented).
+  - Open the file `/etc/ssh/sshd_config` and check that `PermitRootLogin yes` is present (and uncommented).
   - Run `systemctl start sshd.service`.
-  - Run `ifconfig -a` to get the ip address of the machine.
+  - Run `ifconfig -a` to get the ip address of the machine (usually has the following format `10.0.0.<something>`).
 
 On the local machine:
   - ssh `root@<ip-address-of-the-machine>` and enter `yes` and then the password

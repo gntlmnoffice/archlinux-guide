@@ -5,6 +5,7 @@ Some post installation steps to get the setup to a functional state.
 - [1. Connect to wifi](#1-connect-to-wifi)
   - [1.1. Using NetworkManager](#11-using-networkmanager)
   - [1.2. Using wifi-menu with netctl](#12-using-wifi-menu-with-netctl)
+- [4. Connect via ssh (optional)](#4-connect-via-ssh-optional)
 - [2. Add user](#2-add-user)
 - [3. Install X](#3-install-x)
 - [4. Install main packages](#4-install-main-packages)
@@ -33,6 +34,9 @@ Some post installation steps to get the setup to a functional state.
 ### 1.2. Using wifi-menu with netctl
 - Run `wifi-menu` and create a profile. Name it something memorable like **home**
 - Run `netctl enable <name-of-your-profile>` and next time you boot it should connect to the wifi automatically.
+
+## 4. Connect via ssh (optional)
+Follow [these](./5-settings.md#1-setup-ssh-connection) instructions to set up a ssh connection
 
 ## 2. Add user
 - Run `useradd -m -g group_name user_name` to add a user.

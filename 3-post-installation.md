@@ -48,7 +48,8 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
   useradd -m -g wheel sandy
   ```
 - Run `passwd user_name` to set the password for a user.
-- Edit `/etc/sudoers` and uncomment the line:
+- Edit `/etc/sudoers` and uncomment the line. You need to edit the file with root privileges.
+  Make sure is that line because there are other lines that look similar:
   ```
   %wheel ALL=(ALL) NOPASSWD: ALL
   ```
@@ -63,7 +64,8 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
   allowed_users=anybody
   needs_root_rights=yes
   ```
-- Run `xinit` to start the server, or add the following lines to `~/.bash_profile`:
+- Run `xinit` to start the server, or add the following lines to `~/.bash_profile` to start automatically when
+  the session starts:
   ```
   # Start X automatically
   if [[ ! $DISPLAY && $XDG_VTNR -eq 1 ]]; then
@@ -80,7 +82,7 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
   cd yay
   makepkg -si
   cd ..
-  rm -r yay
+  rm -rf yay
   ```
 - Install **audio**:
   - Add user to the audio group:
@@ -93,7 +95,7 @@ See the section [setup ssh connection](./5-settings.md#1-setup-ssh-connection) f
     ```
   - Restart the computer, audio should be working.
 
-- Install **drivers** and configure nvidia:
+- Install **nvidia drivers** (if you have an nvidia card):
   ```
   sudo pacman -Syu ntfs-3g nvidia
   nvidia-xconfig
